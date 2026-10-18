@@ -1,0 +1,4665 @@
+{
+  "lessons": [
+    {
+      "id": "l01",
+      "module": "Big Data",
+      "title": "O que é Big Data?",
+      "src": "Aula 1",
+      "pages": "8–11",
+      "priority": "máxima",
+      "definition": "Os slides descrevem Big Data como grandes conjuntos de dados, muito grandes ou complexos para processamento tradicional.",
+      "explain": "Não basta imaginar uma planilha gigante: o desafio é armazenar, processar, analisar e extrair conhecimento de dados em escala ou complexidade difícil para ferramentas tradicionais.",
+      "example": "Um aplicativo recebe milhões de acessos, vídeos e eventos de localização; um sistema simples talvez não suporte consultar tudo com rapidez.",
+      "question": "O que caracteriza melhor Big Data?",
+      "choices": [
+        "Qualquer banco SQL",
+        "Dados de grande escala ou complexidade que desafiam processamento tradicional",
+        "Um relatório de planilha mensal"
+      ],
+      "correct": 1,
+      "why": "O material da p. 10 enfatiza que ferramentas tradicionais não dão conta de dados muito grandes ou complexos.",
+      "mnemonic": "Big Data = dados difíceis de tratar com métodos tradicionais.",
+      "trap": "Big Data não é só número grande de linhas nem sinônimo de IA.",
+      "analogy": "Pense em uma cozinha: quando o volume de pedidos dispara, o forno e a equipe habituais deixam de ser suficientes.",
+      "extra": "A p. 9 lista os 5 Vs sem defini-los individualmente: as explicações dos Vs no app são complementos didáticos."
+    },
+    {
+      "id": "l02",
+      "module": "Big Data",
+      "title": "V1 · Volume",
+      "src": "Aula 1",
+      "pages": "9",
+      "priority": "máxima",
+      "definition": "Volume é a quantidade total de dados produzidos, acumulados ou processados. (Explicação complementar para o V citado no slide.)",
+      "explain": "Foca em escala: gigabytes, terabytes, milhões de registros. Pergunta: QUANTO dado existe?",
+      "example": "Uma empresa retém 5 bilhões de transações históricas para análises.",
+      "question": "A situação de 5 bilhões de transações destaca…",
+      "choices": [
+        "Variedade",
+        "Velocidade",
+        "Volume"
+      ],
+      "correct": 2,
+      "why": "O enunciado ressalta o tamanho do conjunto de dados.",
+      "mnemonic": "Volume = montanha de dados.",
+      "trap": "Não confunda quantidade acumulada com taxa de chegada dos dados.",
+      "analogy": "Um armazém enorme, cheio de caixas.",
+      "extra": "Mesmo dados exclusivamente numéricos podem apresentar grande volume."
+    },
+    {
+      "id": "l03",
+      "module": "Big Data",
+      "title": "V2 · Velocidade",
+      "src": "Aula 1",
+      "pages": "9",
+      "priority": "máxima",
+      "definition": "Velocidade é o ritmo de geração, chegada, transmissão ou processamento de dados. (Complemento didático.)",
+      "explain": "A questão central é a dimensão temporal: eventos chegando a cada segundo e a necessidade de tratá-los rapidamente.",
+      "example": "Um sistema antifraude precisa avaliar pagamentos no instante da compra.",
+      "question": "Qual aspecto é enfatizado na detecção instantânea?",
+      "choices": [
+        "Velocidade",
+        "Valor",
+        "Variedade"
+      ],
+      "correct": 0,
+      "why": "A rapidez da resposta e do fluxo de eventos é central.",
+      "mnemonic": "Velocidade = relógio correndo.",
+      "trap": "“Milhões por segundo” sugere velocidade; “milhões armazenados” sugere volume.",
+      "analogy": "Uma esteira rolante tão rápida que você precisa acompanhar os produtos imediatamente.",
+      "extra": ""
+    },
+    {
+      "id": "l04",
+      "module": "Big Data",
+      "title": "V3 · Variedade",
+      "src": "Aula 1",
+      "pages": "9",
+      "priority": "máxima",
+      "definition": "Variedade diz respeito à diversidade de tipos, fontes e formatos de dados. (Complemento didático.)",
+      "explain": "Vídeos, imagens, textos, arquivos e tabelas trazem diferentes características e métodos de tratamento.",
+      "example": "Um serviço analisa mensagens de texto, fotografias e registros de GPS ao mesmo tempo.",
+      "question": "O desafio de combinar imagens, textos e coordenadas aponta para…",
+      "choices": [
+        "Valor",
+        "Variedade",
+        "Veracidade"
+      ],
+      "correct": 1,
+      "why": "O problema destaca tipos e formatos diferentes.",
+      "mnemonic": "Variedade = salada de formatos.",
+      "trap": "Não é a quantidade das fontes, mas a diversidade dos dados.",
+      "analogy": "Uma caixa com ferramentas de vários formatos: cada uma exige modo diferente de uso.",
+      "extra": ""
+    },
+    {
+      "id": "l05",
+      "module": "Big Data",
+      "title": "V4 · Veracidade",
+      "src": "Aula 1",
+      "pages": "9",
+      "priority": "máxima",
+      "definition": "Veracidade é o grau de confiança, qualidade e precisão dos dados. (Complemento didático.)",
+      "explain": "Registros falsos, repetidos, incompletos ou incoerentes podem comprometer decisões.",
+      "example": "Sensores de temperatura enviam leituras absurdas porque alguns estão com defeito.",
+      "question": "Que V é afetado por leituras incorretas?",
+      "choices": [
+        "Volume",
+        "Valor",
+        "Veracidade"
+      ],
+      "correct": 2,
+      "why": "A precisão e a confiabilidade das leituras estão comprometidas.",
+      "mnemonic": "Veracidade = verdade/qualidade.",
+      "trap": "Muitos dados não garantem que eles sejam verdadeiros.",
+      "analogy": "Uma régua defeituosa mede muito, mas mede errado.",
+      "extra": ""
+    },
+    {
+      "id": "l06",
+      "module": "Big Data",
+      "title": "V5 · Valor",
+      "src": "Aula 1",
+      "pages": "9",
+      "priority": "máxima",
+      "definition": "Valor é a utilidade obtida quando os dados contribuem para resultados ou decisões. (Complemento didático.)",
+      "explain": "É a pergunta “o que ganhamos com a análise?”. Um conjunto gigantesco sem aplicação útil pode trazer pouco valor.",
+      "example": "Uma loja detecta itens que não vendem e ajusta o estoque, reduzindo perdas.",
+      "question": "Que V aparece quando os dados resultam em uma boa decisão?",
+      "choices": [
+        "Valor",
+        "Volume",
+        "Velocidade"
+      ],
+      "correct": 0,
+      "why": "O destaque é o benefício extraído dos dados.",
+      "mnemonic": "Valor = resultado útil.",
+      "trap": "Dados armazenados não são automaticamente conhecimento acionável.",
+      "analogy": "Ter ingredientes é diferente de preparar uma refeição que alimenta alguém.",
+      "extra": ""
+    },
+    {
+      "id": "l07",
+      "module": "Big Data",
+      "title": "Os Vs atuam juntos",
+      "src": "Aula 1",
+      "pages": "9–11",
+      "priority": "máxima",
+      "definition": "Os cinco Vs listados pelo material são Velocidade, Volume, Variedade, Veracidade e Valor.",
+      "explain": "Uma mesma situação pode envolver vários Vs. Em prova, observe a característica especificamente perguntada; alguns enunciados combinam duas ou mais.",
+      "example": "Um app recebe fotos, texto e GPS a cada segundo, valida sua origem e usa tudo para recomendar rotas.",
+      "question": "Se a questão realçar “fotos, texto e GPS”, o foco é…",
+      "choices": [
+        "Variedade",
+        "Veracidade",
+        "Volume"
+      ],
+      "correct": 0,
+      "why": "O destaque é a diversidade de formatos, ainda que existam outros Vs no caso.",
+      "mnemonic": "Muitos + Rápidos + Diferentes + Confiáveis + Úteis.",
+      "trap": "Não há sexto V definido nos quatro PDFs: outras classificações são externas ao material.",
+      "analogy": "É como gerenciar uma biblioteca: número de livros, entradas por minuto, gêneros, qualidade e utilidade do catálogo.",
+      "extra": "Algumas fontes externas propõem um 6º V, como Variabilidade; não é apresentado como padrão nos slides."
+    },
+    {
+      "id": "l08",
+      "module": "Ciência de Dados",
+      "title": "O que é Data Science?",
+      "src": "Aula 1",
+      "pages": "2–3",
+      "priority": "média",
+      "definition": "O material trata Data Science como estudo disciplinado dos dados, sua captura, transformação, geração e análise.",
+      "explain": "Ciência de dados cruza computação, estatística, matemática e conhecimento do negócio para transformar dados em entendimentos úteis.",
+      "example": "Um marketplace cruza histórico de compras e estatística para descobrir padrões de cancelamento.",
+      "question": "Qual combinação está explicitamente listada como multidisciplinar?",
+      "choices": [
+        "Hardware, design, marketing e vendas",
+        "Computação, estatística, matemática e negócio",
+        "Somente programação e internet"
+      ],
+      "correct": 1,
+      "why": "A Aula 1, p. 3, lista exatamente essas quatro disciplinas.",
+      "mnemonic": "Ciência de dados = código + matemática + estatística + negócio.",
+      "trap": "Data Science não equivale a apenas usar uma ferramenta de gráficos.",
+      "analogy": "O cientista é um investigador: junta pistas, método e contexto para explicar o fenômeno.",
+      "extra": ""
+    },
+    {
+      "id": "l09",
+      "module": "Ciência de Dados",
+      "title": "Perfis profissionais de dados",
+      "src": "Aula 1",
+      "pages": "4–7",
+      "priority": "média",
+      "definition": "Os slides diferenciam Data Scientist, Business Analyst e Data Analyst pelas contribuições ao problema e ao negócio.",
+      "explain": "Data Scientist formula problemas e hipóteses e analisa resultados; Business Analyst interpreta dados no contexto do negócio; Data Analyst examina dados disponíveis para encontrar soluções.",
+      "example": "Em uma loja, uma pessoa propõe o modelo, outra relaciona resultados à estratégia e uma terceira encontra padrões nos relatórios.",
+      "question": "Quem analisa dados gerados em relação ao negócio, conforme o slide?",
+      "choices": [
+        "Business Analyst",
+        "Data Analyst",
+        "Data Scientist"
+      ],
+      "correct": 0,
+      "why": "Essa é a definição de Business Analyst na p. 6.",
+      "mnemonic": "Scientist = hipótese; Business = negócio; Analyst = dados/problema.",
+      "trap": "As funções se sobrepõem na prática; a divisão aqui segue a simplificação dos slides.",
+      "analogy": "Três ângulos de um mesmo mapa: investigar, interpretar o cenário e analisar pistas.",
+      "extra": ""
+    },
+    {
+      "id": "l10",
+      "module": "Inteligência Artificial",
+      "title": "Conceito e objetivo da IA",
+      "src": "Aula 1",
+      "pages": "12–26",
+      "priority": "média",
+      "definition": "Segundo o PDF, IA busca permitir que dispositivos realizem tarefas que lembram percepção, decisão e resolução de problemas humanos.",
+      "explain": "Algoritmos e dados ajudam sistemas a decidir dentro dos objetivos definidos. O material usa a analogia de verificar se um bolo está pronto.",
+      "example": "Um programa recebe características de tráfego e sugere um caminho alternativo.",
+      "question": "Qual afirmação mais corresponde à definição ensinada?",
+      "choices": [
+        "IA sempre tem autoconsciência",
+        "IA é exclusivamente uma máquina humanoide",
+        "IA possibilita tarefas que lembram raciocínio humano"
+      ],
+      "correct": 2,
+      "why": "Os slides descrevem IA em termos de capacidade de perceber variáveis e tomar decisões.",
+      "mnemonic": "IA = perceber → decidir → resolver.",
+      "trap": "Não confunda IA com robôs humanoides ou consciência.",
+      "analogy": "Uma receita com instruções e sinais de entrada: “se ainda estiver cru, espere”.",
+      "extra": ""
+    },
+    {
+      "id": "l11",
+      "module": "Inteligência Artificial",
+      "title": "Algoritmo, software e hardware",
+      "src": "Aula 1",
+      "pages": "16–22",
+      "priority": "média",
+      "definition": "O material distingue hardware (parte física) e software (programas/instruções) e destaca o papel de algoritmos.",
+      "explain": "Algoritmos descrevem passos ou regras. Software executa instruções em hardware. Sistemas de IA combinam procedimentos computacionais com dados.",
+      "example": "No reconhecimento de objetos, uma câmera captura imagem, um programa a processa e o computador executa os cálculos.",
+      "question": "Qual componente corresponde a instruções e programas?",
+      "choices": [
+        "Software",
+        "Hardware",
+        "Cabos de rede"
+      ],
+      "correct": 0,
+      "why": "Software é a parte lógica/programável, conforme a aula.",
+      "mnemonic": "Hardware = tocar; Software = instruir; Algoritmo = passos.",
+      "trap": "Nem todo algoritmo representa inteligência artificial.",
+      "analogy": "Corpo (hardware), receita (algoritmo) e instruções executadas (software).",
+      "extra": ""
+    },
+    {
+      "id": "l12",
+      "module": "Inteligência Artificial",
+      "title": "IA simbólica e conexionista",
+      "src": "Aula 1",
+      "pages": "31–33",
+      "priority": "média",
+      "definition": "O PDF contrapõe IA simbólica (manipulação de símbolos) e conexionista (inspirada em neurônios).",
+      "explain": "A simbólica trabalha com regras, símbolos e representações explícitas; a conexionista utiliza estruturas de unidades conectadas. O slide ainda menciona a abordagem evolucionária.",
+      "example": "Regras “se-então” ilustram abordagem simbólica; uma rede neural para classificar imagens ilustra conexionista.",
+      "question": "Uma rede neural inspirada em conexões entre neurônios representa IA…",
+      "choices": [
+        "Simbólica",
+        "Conexionista",
+        "Exclusivamente manual"
+      ],
+      "correct": 1,
+      "why": "A p. 33 liga conexionismo à inspiração no cérebro e ao deep learning.",
+      "mnemonic": "Simbólica = símbolos; Conexionista = conexões.",
+      "trap": "O material menciona também abordagem evolucionária, sem aprofundá-la.",
+      "analogy": "Simbólica: manual de regras. Conexionista: conexões que ajustam padrões.",
+      "extra": ""
+    },
+    {
+      "id": "l13",
+      "module": "Inteligência Artificial",
+      "title": "Redes neurais artificiais",
+      "src": "Aula 1",
+      "pages": "34–38",
+      "priority": "média",
+      "definition": "Redes neurais são modelos com unidades de processamento conectadas, chamadas neurônios artificiais ou nós.",
+      "explain": "As conexões possuem pesos ajustados durante treinamento para mapear entradas às saídas desejadas.",
+      "example": "Uma rede recebe fotos de gatos e cachorros e ajusta pesos para reconhecer padrões nas imagens.",
+      "question": "O que é alterado durante o treinamento de uma rede neural, segundo o slide?",
+      "choices": [
+        "Os pesos das conexões",
+        "O tamanho físico do monitor",
+        "As letras do teclado"
+      ],
+      "correct": 0,
+      "why": "As páginas 35–36 descrevem o ajuste dos pesos.",
+      "mnemonic": "Nós + conexões + pesos + treino.",
+      "trap": "Redes neurais são modelos computacionais inspirados no cérebro, não neurônios biológicos.",
+      "analogy": "Uma mesa de som: cada controle ajusta a força de uma contribuição.",
+      "extra": ""
+    },
+    {
+      "id": "l14",
+      "module": "Inteligência Artificial",
+      "title": "IA forte e IA fraca nos slides",
+      "src": "Aula 1",
+      "pages": "39–44",
+      "priority": "média",
+      "definition": "A aula apresenta IA forte como categoria associada à autoconsciência e IA fraca como sistemas de tarefas mais específicas.",
+      "explain": "Para fins de revisão dos slides, memorize a distinção: fraca executa tarefas sem autoconsciência; forte é apresentada como conceito de capacidade ampla/autoconsciente.",
+      "example": "Um chatbot especializado em atendimento é descrito como aplicação de IA fraca no material.",
+      "question": "Na classificação apresentada, qual exemplo se aproxima da IA fraca?",
+      "choices": [
+        "Programa voltado a tarefa específica, sem autoconsciência",
+        "Sistema comprovadamente autoconsciente",
+        "Máquina capaz de realizar qualquer tarefa humana"
+      ],
+      "correct": 0,
+      "why": "O slide 42–43 associa IA fraca a tarefas específicas e processamento de linguagem natural.",
+      "mnemonic": "Fraca = focada; forte = capacidade geral na apresentação.",
+      "trap": "A afirmação do slide que aproxima ML/DL de IA forte não significa, por si só, que ML/DL comprovem autoconsciência.",
+      "analogy": "Ferramenta especializada x hipótese de agente geral.",
+      "extra": ""
+    },
+    {
+      "id": "l15",
+      "module": "Inteligência Artificial",
+      "title": "Aplicações reais de IA",
+      "src": "Aula 1",
+      "pages": "45–55",
+      "priority": "média",
+      "definition": "O material lista aplicações em indústria, GPS, carros autônomos, chatbots, varejo, jornalismo, bancos, saúde, redes sociais e manutenção.",
+      "explain": "A lógica comum é usar dados e modelos para reconhecer padrões, apoiar decisões ou automatizar tarefas.",
+      "example": "Uma fábrica identifica vibração anormal em um equipamento antes que ele quebre.",
+      "question": "A previsão de possíveis falhas em máquinas chama-se…",
+      "choices": [
+        "Marketing de conversão",
+        "Manutenção preditiva",
+        "Formulário de feedback"
+      ],
+      "correct": 1,
+      "why": "A aula nomeia manutenção preditiva na p. 55.",
+      "mnemonic": "IA no cotidiano = reconhecer, prever e apoiar decisões.",
+      "trap": "Nem todo sistema automatizado utiliza aprendizagem de máquina.",
+      "analogy": "Assistente que sinaliza problemas antes que se tornem crises.",
+      "extra": ""
+    },
+    {
+      "id": "l16",
+      "module": "Inteligência Artificial",
+      "title": "IA, Machine Learning e Deep Learning",
+      "src": "Aula 1",
+      "pages": "56–62",
+      "priority": "média",
+      "definition": "O material afirma que Machine Learning faz parte da IA e Deep Learning é uma abordagem de ML com múltiplas camadas neurais.",
+      "explain": "IA é o campo abrangente. ML aprende padrões a partir da experiência/dados. DL usa redes com várias camadas para tarefas complexas.",
+      "example": "Um filtro de fraude que melhora com dados anteriores é ML; um sistema de imagem com redes profundas é DL.",
+      "question": "Qual relação corresponde ao material?",
+      "choices": [
+        "IA faz parte de DL",
+        "ML e IA são exatamente iguais",
+        "DL é abordagem de ML, que integra IA"
+      ],
+      "correct": 2,
+      "why": "Os slides p. 56 e p. 62 explicitam essa relação hierárquica.",
+      "mnemonic": "IA ⊃ ML ⊃ DL.",
+      "trap": "Machine Learning não é sinônimo de toda a inteligência artificial.",
+      "analogy": "Caixas encaixadas: caixa grande IA, dentro ML, e dentro DL.",
+      "extra": ""
+    },
+    {
+      "id": "l17",
+      "module": "Inteligência Artificial",
+      "title": "Machine Learning na prática",
+      "src": "Aula 1",
+      "pages": "59–67",
+      "priority": "média",
+      "definition": "Machine Learning é descrito como um sistema que muda seu comportamento com base em sua experiência/treinamento.",
+      "explain": "A aula cita combate a fraudes, tradução, recomendação de conteúdos e bancos de dados autônomos.",
+      "example": "Streaming aprende suas preferências e sugere novos filmes com base no histórico de consumo.",
+      "question": "O histórico de conteúdos consumidos usado para recomendações exemplifica…",
+      "choices": [
+        "Apenas hardware",
+        "Machine Learning",
+        "Formulário manual"
+      ],
+      "correct": 1,
+      "why": "A p. 67 dá a recomendação de conteúdo como aplicação de ML.",
+      "mnemonic": "Aprender com exemplos para melhorar desempenho.",
+      "trap": "Ter dados não significa que um sistema aprende automaticamente; precisa haver um mecanismo apropriado.",
+      "analogy": "Aprender pelo treino, como ajustar uma estratégia após várias partidas.",
+      "extra": ""
+    },
+    {
+      "id": "l18",
+      "module": "Business Intelligence",
+      "title": "O que é Business Intelligence?",
+      "src": "Aula 1",
+      "pages": "68–72",
+      "priority": "média",
+      "definition": "BI é o processo de coleta, análise e conversão de dados em informações de alto valor para planejamento e operações.",
+      "explain": "BI organiza evidências para apoiar escolhas; os slides ressaltam que o BI não entrega simplesmente “sim” ou “não” como resposta decisória.",
+      "example": "Um gerente cruza receita por região e satisfação para decidir onde investir.",
+      "question": "BI tem como propósito central…",
+      "choices": [
+        "Substituir completamente gestores",
+        "Gerar informações e insights para apoiar decisões",
+        "Armazenar dados sem analisá-los"
+      ],
+      "correct": 1,
+      "why": "A p. 68 fala em informação de alto valor para estratégia e operação.",
+      "mnemonic": "BI = dados → insights → decisões.",
+      "trap": "Power BI é ferramenta; BI é processo/conceito.",
+      "analogy": "Painel de um avião informa; o piloto decide.",
+      "extra": ""
+    },
+    {
+      "id": "l19",
+      "module": "Business Intelligence",
+      "title": "Três pilares de BI",
+      "src": "Aula 1",
+      "pages": "73–76",
+      "priority": "média",
+      "definition": "Os slides listam três pilares: estratégico, analítico e operacional.",
+      "explain": "Estratégico monitora metas e prioridades; analítico interpreta problemas e oportunidades; operacional aplica ações planejadas.",
+      "example": "Loja define meta de redução de perdas, investiga causas e altera reposição de estoque.",
+      "question": "Qual pilar está associado à execução das ações planejadas?",
+      "choices": [
+        "Operacional",
+        "Estratégico",
+        "Analítico"
+      ],
+      "correct": 0,
+      "why": "A p. 76 define operacional como apoio na aplicação das ações.",
+      "mnemonic": "Estratégia planeja; Análise entende; Operação faz.",
+      "trap": "Os pilares se conectam, mas suas funções não são idênticas.",
+      "analogy": "Planejar a viagem, verificar o mapa, dirigir.",
+      "extra": ""
+    },
+    {
+      "id": "l20",
+      "module": "Business Intelligence",
+      "title": "As quatro etapas do BI",
+      "src": "Aula 1",
+      "pages": "77–85",
+      "priority": "média",
+      "definition": "O material organiza o BI em coleta, análise/organização, geração de insights/estratégias e acompanhamento de performance.",
+      "explain": "Coletar registros → organizar e analisar → formular decisões → medir resultados e ajustar.",
+      "example": "Uma plataforma reúne eventos, detecta abandono do carrinho, melhora checkout e mede conversão após a mudança.",
+      "question": "Depois de aplicar a estratégia, qual etapa fecha o ciclo de BI?",
+      "choices": [
+        "Descartar o histórico",
+        "Acompanhamento de performance",
+        "Ignorar indicadores"
+      ],
+      "correct": 1,
+      "why": "O slide 84 enfatiza medir resultados após as decisões.",
+      "mnemonic": "C-A-I-A: Coletar, Analisar, Insights, Acompanhar.",
+      "trap": "Analisar dados e gerar insights são etapas conectadas, mas não equivalentes.",
+      "analogy": "Ciclo de melhoria contínua: observar → entender → agir → verificar.",
+      "extra": ""
+    },
+    {
+      "id": "l21",
+      "module": "Coleta de Dados",
+      "title": "O que é coleta de dados?",
+      "src": "Aula 2",
+      "pages": "2–17",
+      "priority": "média",
+      "definition": "A aula descreve coleta como captação de conteúdo estratégico de ferramentas, sites, formulários e interações.",
+      "explain": "A coleta permite conhecer público, mercado, resultados e comportamento. Precisa ter finalidade e ligação com a análise posterior.",
+      "example": "Um e-commerce registra quantas pessoas visitam páginas e completam pedidos.",
+      "question": "Qual sequência faz sentido a partir da aula?",
+      "choices": [
+        "Coletar dados → analisar → tomar decisões",
+        "Publicar campanha → ignorar dados",
+        "Analisar sem nenhuma informação"
+      ],
+      "correct": 0,
+      "why": "Os slides ligam coleta à análise, interpretação e melhoria estratégica.",
+      "mnemonic": "Coleta = capturar; análise = interpretar.",
+      "trap": "Juntar tudo sem objetivos e sem analisar não produz automaticamente valor.",
+      "analogy": "Primeiro reunir pistas; depois interpretá-las.",
+      "extra": ""
+    },
+    {
+      "id": "l22",
+      "module": "Coleta de Dados",
+      "title": "KPIs e indicadores estratégicos",
+      "src": "Aula 2",
+      "pages": "18–22",
+      "priority": "média",
+      "definition": "KPIs são indicadores estratégicos usados para acompanhar métricas essenciais de objetivos definidos.",
+      "explain": "Exemplos do slide: número de leads e ticket médio. O indicador transforma metas em algo mensurável.",
+      "example": "Uma loja mede conversão de visitantes em compradores após campanha.",
+      "question": "Qual opção é um exemplo de KPI citado na aula?",
+      "choices": [
+        "Cor de parede do escritório",
+        "Ticket médio do e-commerce",
+        "Marca do notebook"
+      ],
+      "correct": 1,
+      "why": "Aula 2, p. 18, cita explicitamente ticket médio.",
+      "mnemonic": "KPI = medir o que importa para a meta.",
+      "trap": "Nem toda métrica é automaticamente um KPI estratégico.",
+      "analogy": "Painel de combustível: uma medição útil para a decisão de abastecer.",
+      "extra": ""
+    },
+    {
+      "id": "l23",
+      "module": "Coleta de Dados",
+      "title": "Objetivos e planejamento de coleta",
+      "src": "Aula 2",
+      "pages": "29–39",
+      "priority": "média",
+      "definition": "Os slides recomendam definir objetivos, planejar a recorrência da coleta e analisar o que foi obtido.",
+      "explain": "Objetivos incluem entender consumidores, avaliar campanhas e monitorar vendas ou finanças. Os dados precisam ser coletados e analisados regularmente.",
+      "example": "Uma equipe define monitorar insatisfação, aplica pesquisa mensal e ajusta atendimento com base nos resultados.",
+      "question": "Antes de escolher ferramentas, o melhor primeiro passo é…",
+      "choices": [
+        "Definir o objetivo da coleta",
+        "Coletar absolutamente tudo",
+        "Excluir todas as métricas"
+      ],
+      "correct": 0,
+      "why": "Aula 2, p. 32, pergunta explicitamente por que se está coletando dados.",
+      "mnemonic": "Objetivo → planejamento → coleta → análise → melhoria.",
+      "trap": "Ferramentas sozinhas não substituem pergunta de negócio.",
+      "analogy": "Antes de construir um sensor, defina o que quer medir e por quê.",
+      "extra": ""
+    },
+    {
+      "id": "l24",
+      "module": "Coleta de Dados",
+      "title": "Relacionamento e campanhas",
+      "src": "Aula 2",
+      "pages": "20–28",
+      "priority": "média",
+      "definition": "Interações e respostas do público alimentam decisões sobre relacionamento com clientes e campanhas.",
+      "explain": "Monitorar cliques, respostas, preferências e canais pode ajudar a personalizar atendimento, mensagens e estratégias.",
+      "example": "Uma marca identifica menor engajamento em anúncios de um canal e testa outro formato.",
+      "question": "Dados de interação com campanhas ajudam principalmente a…",
+      "choices": [
+        "Entender comportamento e ajustar campanhas",
+        "Provar que qualquer anúncio funciona",
+        "Eliminar necessidade de planejamento"
+      ],
+      "correct": 0,
+      "why": "Aulas 2, p. 20–28, relacionam coleta com compreensão do público e otimização.",
+      "mnemonic": "Interação → conhecimento do público → ajuste.",
+      "trap": "Cliques não garantem por si só satisfação ou conversão: interprete o contexto.",
+      "analogy": "Conversa: você observa reação e adapta o modo de se comunicar.",
+      "extra": ""
+    },
+    {
+      "id": "l25",
+      "module": "Coleta de Dados",
+      "title": "Ferramentas de coleta",
+      "src": "Aula 2",
+      "pages": "40–45",
+      "priority": "média",
+      "definition": "O PDF cita formulários, Google Analytics, UpMiner e Ion como ferramentas/abordagens de coleta.",
+      "explain": "Formulários captam respostas declaradas; Analytics acompanha métricas digitais; UpMiner pesquisa fontes variadas; Ion coleta interações com conteúdos interativos.",
+      "example": "Uma pesquisa de satisfação pós-compra é feita com questionário de múltipla escolha.",
+      "question": "Qual ferramenta é mais diretamente adequada ao caso de satisfação pós-compra?",
+      "choices": [
+        "Formulário",
+        "Compilador de código",
+        "Editor de vídeo"
+      ],
+      "correct": 0,
+      "why": "A p. 41 indica formulários para satisfação e pós-compra.",
+      "mnemonic": "Formulário = perguntar; Analytics = observar tráfego; UpMiner = minerar; Ion = interagir.",
+      "trap": "As funcionalidades comerciais podem mudar; aqui estudamos as descrições dos slides.",
+      "analogy": "Caixa de ferramentas: instrumento adequado para cada pergunta.",
+      "extra": ""
+    },
+    {
+      "id": "l26",
+      "module": "Raciocínio Lógico",
+      "title": "Raciocínio dedutivo",
+      "src": "Aula 5 — Bailly",
+      "pages": "3–5",
+      "priority": "alta",
+      "definition": "Vai de premissas gerais para conclusão específica; o slide apresenta silogismo de duas premissas e uma conclusão.",
+      "explain": "Se as premissas são verdadeiras e a conclusão segue corretamente delas, o argumento dedutivo é válido.",
+      "example": "Todos os mamíferos respiram; baleias são mamíferos; logo, baleias respiram.",
+      "question": "“Todos os A são B; X é A; logo X é B” é…",
+      "choices": [
+        "Indução",
+        "Dedução",
+        "Abdução"
+      ],
+      "correct": 1,
+      "why": "A direção geral → específico caracteriza dedução.",
+      "mnemonic": "Dedução = descer do geral ao caso.",
+      "trap": "Um argumento pode ser válido na forma mesmo se partir de premissas falsas; o slide enfatiza premissas verdadeiras para conclusão verdadeira.",
+      "analogy": "Uma regra universal aplicada a um caso particular.",
+      "extra": ""
+    },
+    {
+      "id": "l27",
+      "module": "Raciocínio Lógico",
+      "title": "Raciocínio indutivo",
+      "src": "Aula 5 — Bailly",
+      "pages": "6–8",
+      "priority": "alta",
+      "definition": "Parte de observações específicas para formular uma conclusão geral provável, não garantida.",
+      "explain": "A generalização pode ser útil, mas novas observações podem contrariá-la.",
+      "example": "Nas últimas dez visitas a um restaurante houve fila. Você espera encontrar fila na próxima vez.",
+      "question": "Observar exemplos e generalizar uma regularidade é…",
+      "choices": [
+        "Indução",
+        "Dedução",
+        "Análise decompositiva"
+      ],
+      "correct": 0,
+      "why": "O padrão observado leva a uma conclusão geral provável.",
+      "mnemonic": "Indução = subir dos exemplos para a regra.",
+      "trap": "Uma amostra limitada não prova universalidade.",
+      "analogy": "Ver muitos pássaros voando e supor que todo pássaro voe.",
+      "extra": ""
+    },
+    {
+      "id": "l28",
+      "module": "Raciocínio Lógico",
+      "title": "Raciocínio abdutivo",
+      "src": "Aula 5 — Bailly",
+      "pages": "9–11",
+      "priority": "alta",
+      "definition": "Parte de um fato observado e propõe uma hipótese plausível que o explique.",
+      "explain": "É uma inferência para uma explicação possível, especialmente quando faltam informações.",
+      "example": "Ao ver a rua molhada, você considera que talvez tenha chovido — mas pode ter sido uma mangueira.",
+      "question": "Rua molhada → “talvez choveu” é raciocínio…",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo"
+      ],
+      "correct": 2,
+      "why": "A observação leva a uma hipótese explicativa.",
+      "mnemonic": "Abdução = achar explicação.",
+      "trap": "Uma hipótese plausível não é uma certeza; pode haver explicações alternativas.",
+      "analogy": "Um detetive testa suspeitas a partir de pistas.",
+      "extra": ""
+    },
+    {
+      "id": "l29",
+      "module": "Raciocínio Lógico",
+      "title": "Raciocínio analítico",
+      "src": "Aula 5 — Bailly",
+      "pages": "12–14",
+      "priority": "alta",
+      "definition": "Decompõe problemas complexos em partes menores para analisar e resolver o todo.",
+      "explain": "Permite identificar subproblemas e resolvê-los sistematicamente.",
+      "example": "Você divide uma falha de API em autenticação, regras de negócio e banco de dados para investigar.",
+      "question": "Dividir um problema em componentes para solucioná-lo representa raciocínio…",
+      "choices": [
+        "Crítico",
+        "Analítico",
+        "Abdutivo"
+      ],
+      "correct": 1,
+      "why": "A p. 12 destaca a decomposição em partes menores.",
+      "mnemonic": "Analítico = quebrar em partes.",
+      "trap": "Não é apenas discordar de uma afirmação: isso se aproxima do pensamento crítico.",
+      "analogy": "Quebrar um quebra-cabeça grande em grupos de peças.",
+      "extra": ""
+    },
+    {
+      "id": "l30",
+      "module": "Raciocínio Lógico",
+      "title": "Raciocínio crítico",
+      "src": "Aula 5 — Bailly",
+      "pages": "15–17",
+      "priority": "alta",
+      "definition": "Analisa reflexivamente argumentos, informações e evidências para julgar coerência, validade e limitações.",
+      "explain": "Você questiona a qualidade das provas e considera objeções e interpretações alternativas.",
+      "example": "Um gráfico diz que um produto dobra vendas, mas você confere período e amostra antes de aceitar.",
+      "question": "Examinar a confiabilidade das evidências é raciocínio…",
+      "choices": [
+        "Crítico",
+        "Dedutivo",
+        "Indutivo"
+      ],
+      "correct": 0,
+      "why": "A p. 15 define crítico como avaliação de argumentos e evidências.",
+      "mnemonic": "Crítico = questionar e avaliar as evidências.",
+      "trap": "Pensamento crítico não é criticar pessoas nem negar tudo.",
+      "analogy": "Um verificador de argumentos, não apenas de números.",
+      "extra": ""
+    },
+    {
+      "id": "l31",
+      "module": "Raciocínio Lógico",
+      "title": "Comparando os cinco raciocínios",
+      "src": "Aula 5 — Bailly",
+      "pages": "3–17",
+      "priority": "alta",
+      "definition": "A aula apresenta cinco tipos: dedutivo, indutivo, abdutivo, analítico e crítico.",
+      "explain": "Dedutivo: geral → específico; indutivo: exemplos → generalização; abdutivo: fato → hipótese; analítico: decomposição; crítico: avaliação de evidências.",
+      "example": "Ao achar erros num relatório você pode decompor o processo (analítico), formular hipótese (abdutivo) e avaliar evidências (crítico).",
+      "question": "“O servidor caiu, talvez seja falta de memória” ilustra principalmente…",
+      "choices": [
+        "Abdução",
+        "Dedução",
+        "Indução"
+      ],
+      "correct": 0,
+      "why": "É uma possível explicação para um fato observado.",
+      "mnemonic": "DE = geral; IN = padrões; AB = hipótese; AN = partes; CR = evidências.",
+      "trap": "Os cinco raciocínios podem ser usados conjuntamente em situações reais.",
+      "analogy": "Caixa de ferramentas cognitivas: cada ferramenta responde a uma pergunta diferente.",
+      "extra": ""
+    },
+    {
+      "id": "l32",
+      "module": "Ética e Confiança",
+      "title": "Ética dos dados",
+      "src": "Aula 3",
+      "pages": "2–16",
+      "priority": "baixa",
+      "definition": "Ética de dados considera consequências morais da coleta, processamento, armazenamento, compartilhamento e uso de dados.",
+      "explain": "A aula afirma que a ética vai além da privacidade, acompanhando todo o ciclo de vida dos dados e envolvendo governança e responsabilidades.",
+      "example": "Uma empresa questiona se deve usar perfis pessoais para influenciar consumidores sem clareza sobre as consequências.",
+      "question": "Qual afirmação é compatível com a aula?",
+      "choices": [
+        "Ética só trata de esconder senhas",
+        "Ética abrange efeitos morais de todo o ciclo de dados",
+        "Basta coletar dados legalmente, sem revisar impactos"
+      ],
+      "correct": 1,
+      "why": "A p. 6–9 afirma que ética é mais ampla que privacidade e abrange etapas do ciclo.",
+      "mnemonic": "Ética = responsabilidade ao longo de todo o ciclo.",
+      "trap": "O recado do colega indica prioridade baixa na prova, não irrelevância profissional.",
+      "analogy": "Regras de trânsito para a estrada completa, não só para o estacionamento.",
+      "extra": ""
+    },
+    {
+      "id": "l33",
+      "module": "Ética e Confiança",
+      "title": "Consentimento e responsabilidade",
+      "src": "Aula 3",
+      "pages": "21–25",
+      "priority": "baixa",
+      "definition": "A aula destaca informar adequadamente usuários e agir de forma responsável no tratamento de dados.",
+      "explain": "Consentimento e transparência são apresentados como preocupações éticas da coleta, ao lado de responsabilidade por uso e proteção.",
+      "example": "Uma empresa informa claramente a finalidade de dados que solicita em uma pesquisa.",
+      "question": "O exemplo de comunicar finalidades está ligado a…",
+      "choices": [
+        "Transparência",
+        "Velocidade",
+        "Indução"
+      ],
+      "correct": 0,
+      "why": "As páginas 21–23 desenvolvem consentimento e transparência.",
+      "mnemonic": "Antes de coletar, explique por quê.",
+      "trap": "As obrigações legais reais variam conforme a base legal; aqui o foco é a discussão dos slides.",
+      "analogy": "Pedir emprestado um objeto explicando como será utilizado.",
+      "extra": ""
+    },
+    {
+      "id": "l34",
+      "module": "Ética e Confiança",
+      "title": "Discriminação e vazamento de dados",
+      "src": "Aula 3",
+      "pages": "26–31",
+      "priority": "baixa",
+      "definition": "Os slides abordam discriminação algorítmica e vazamentos como riscos da coleta e tratamento de dados.",
+      "explain": "Sistemas podem reproduzir tratamento injusto; dados podem ser expostos. A aula recomenda cuidado com conjuntos de dados, segurança e resposta a incidentes.",
+      "example": "Uma ferramenta nega oportunidades injustamente a certo grupo por padrões históricos enviesados.",
+      "question": "Qual risco ético está em destaque?",
+      "choices": [
+        "Velocidade de processamento",
+        "Discriminação algorítmica",
+        "Criação de KPI"
+      ],
+      "correct": 1,
+      "why": "A p. 26–28 discute discriminação resultante do uso de algoritmos.",
+      "mnemonic": "Algoritmos também precisam de avaliação ética.",
+      "trap": "Esta parte recebe revisão breve por orientação informal, mas segue presente no material.",
+      "analogy": "Se a régua de avaliação é enviesada, o resultado pode perpetuar injustiças.",
+      "extra": ""
+    }
+  ],
+  "modules": [
+    {
+      "id": "Big Data",
+      "label": "Big Data e 5 Vs",
+      "icon": "◈",
+      "subtitle": "O principal foco indicado para a prova",
+      "priority": "máxima"
+    },
+    {
+      "id": "Raciocínio Lógico",
+      "label": "Raciocínio lógico",
+      "icon": "◇",
+      "subtitle": "Os cinco tipos do professor Bailly",
+      "priority": "alta"
+    },
+    {
+      "id": "Ciência de Dados",
+      "label": "Ciência de Dados",
+      "icon": "⌘",
+      "subtitle": "Conceitos e perfis profissionais",
+      "priority": "média"
+    },
+    {
+      "id": "Inteligência Artificial",
+      "label": "IA e Machine Learning",
+      "icon": "✦",
+      "subtitle": "Conceitos, abordagens e aplicações",
+      "priority": "média"
+    },
+    {
+      "id": "Business Intelligence",
+      "label": "Business Intelligence",
+      "icon": "▤",
+      "subtitle": "Pilares, etapas e decisões",
+      "priority": "média"
+    },
+    {
+      "id": "Coleta de Dados",
+      "label": "Coleta de Dados",
+      "icon": "⌁",
+      "subtitle": "Objetivos, KPIs e ferramentas",
+      "priority": "média"
+    },
+    {
+      "id": "Ética e Confiança",
+      "label": "Ética e proteção",
+      "icon": "♢",
+      "subtitle": "Revisão reduzida pela orientação informal",
+      "priority": "baixa"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q001",
+      "module": "Big Data",
+      "q": "De acordo com a Aula 1, Big Data pode envolver dados que…",
+      "options": [
+        "cabem apenas em planilhas",
+        "são sempre imagens",
+        "têm escala/complexidade além de ferramentas tradicionais",
+        "não precisam ser analisados"
+      ],
+      "correct": 2,
+      "explain": "A definição da p. 10 destaca grandeza ou complexidade difícil para processamento tradicional.",
+      "source": "Aula 1 · p. 10",
+      "difficulty": 1
+    },
+    {
+      "id": "q002",
+      "module": "Big Data",
+      "q": "Uma instituição armazena 30 bilhões de transações. O V em destaque é…",
+      "options": [
+        "Velocidade",
+        "Veracidade",
+        "Variedade",
+        "Volume"
+      ],
+      "correct": 3,
+      "explain": "A quantidade acumulada caracteriza Volume.",
+      "source": "Aula 1 · p. 9 + explicação complementar",
+      "difficulty": 1
+    },
+    {
+      "id": "q003",
+      "module": "Big Data",
+      "q": "Fraudes precisam ser identificadas durante a autorização da compra. Destaque para…",
+      "options": [
+        "Velocidade",
+        "Variedade",
+        "Volume",
+        "Veracidade"
+      ],
+      "correct": 0,
+      "explain": "O foco é o tempo disponível para processar os eventos.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 1
+    },
+    {
+      "id": "q004",
+      "module": "Big Data",
+      "q": "Dados chegam em áudio, imagens, XML e SQL. Que V predomina?",
+      "options": [
+        "Veracidade",
+        "Variedade",
+        "Volume",
+        "Valor"
+      ],
+      "correct": 1,
+      "explain": "Os formatos e estruturas distintos ilustram Variedade.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 1
+    },
+    {
+      "id": "q005",
+      "module": "Big Data",
+      "q": "A base tem registros duplicados e datas falsas. O problema central é…",
+      "options": [
+        "Valor",
+        "Variedade",
+        "Veracidade",
+        "Velocidade"
+      ],
+      "correct": 2,
+      "explain": "A qualidade e a confiabilidade foram afetadas.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 1
+    },
+    {
+      "id": "q006",
+      "module": "Big Data",
+      "q": "A análise identifica desperdícios e aumenta a eficiência. Que V predomina?",
+      "options": [
+        "Volume",
+        "Velocidade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 3,
+      "explain": "O benefício prático obtido demonstra Valor.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 1
+    },
+    {
+      "id": "q007",
+      "module": "Big Data",
+      "q": "Mil mensagens são recebidas a cada segundo. A característica mais diretamente destacada é…",
+      "options": [
+        "Velocidade",
+        "Volume",
+        "Valor",
+        "Veracidade"
+      ],
+      "correct": 0,
+      "explain": "A expressão “a cada segundo” ressalta taxa/tempo.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 2
+    },
+    {
+      "id": "q008",
+      "module": "Big Data",
+      "q": "Um banco acumulou muitos dados, mas nenhum foi utilizado para decidir. Qual V ainda não se materializou?",
+      "options": [
+        "Variedade",
+        "Valor",
+        "Veracidade",
+        "Velocidade"
+      ],
+      "correct": 1,
+      "explain": "O benefício esperado da análise ainda não ocorreu.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 2
+    },
+    {
+      "id": "q009",
+      "module": "Big Data",
+      "q": "Um hospital reúne laudos em texto, imagens e resultados em tabelas. O principal V descrito é…",
+      "options": [
+        "Velocidade",
+        "Volume",
+        "Variedade",
+        "Veracidade"
+      ],
+      "correct": 2,
+      "explain": "O enunciado destaca diversidade de formatos.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 2
+    },
+    {
+      "id": "q010",
+      "module": "Big Data",
+      "q": "O uso de dados de sensores pouco confiáveis pode prejudicar qual V?",
+      "options": [
+        "Volume",
+        "Valor",
+        "Velocidade",
+        "Veracidade"
+      ],
+      "correct": 3,
+      "explain": "Medições incorretas afetam confiabilidade.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 2
+    },
+    {
+      "id": "q011",
+      "module": "Big Data",
+      "q": "Qual lista reproduz os Vs presentes nos slides?",
+      "options": [
+        "Volume, Velocidade, Variedade, Veracidade e Valor",
+        "Volume, Valor, Visão, Vigência e Velocidade",
+        "Variedade, Virtualização, Volume, Valor e Visão",
+        "Velocidade, Versatilidade, Valor, Vínculo e Veracidade"
+      ],
+      "correct": 0,
+      "explain": "A p. 9 traz precisamente os cinco termos da alternativa correta.",
+      "source": "Aula 1 · p. 9",
+      "difficulty": 1
+    },
+    {
+      "id": "q012",
+      "module": "Big Data",
+      "q": "O sexto V está definido expressamente nos quatro PDFs?",
+      "options": [
+        "Sim, Viabilidade",
+        "Não, o material lista explicitamente cinco Vs",
+        "Sim, Vulnerabilidade",
+        "Sim, Visualização"
+      ],
+      "correct": 1,
+      "explain": "Não foi identificado um sexto V definido nesses PDFs; existem classificações externas.",
+      "source": "Aula 1 · p. 9",
+      "difficulty": 2
+    },
+    {
+      "id": "q013",
+      "module": "Big Data",
+      "q": "Um fluxo possui poucos registros, mas atualizações tão rápidas que o sistema se atrasa. Qual V é mais relevante?",
+      "options": [
+        "Volume",
+        "Variedade",
+        "Velocidade",
+        "Valor"
+      ],
+      "correct": 2,
+      "explain": "O gargalo está no ritmo de chegada/processamento, não na quantidade total.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 3
+    },
+    {
+      "id": "q014",
+      "module": "Big Data",
+      "q": "10 TB de dados incorretos geraram uma decisão ruim. Que distinção é ilustrada?",
+      "options": [
+        "Volume não garante veracidade",
+        "Velocidade garante valor",
+        "Variedade elimina falsidade",
+        "Veracidade depende do formato"
+      ],
+      "correct": 0,
+      "explain": "Grande quantidade não implica qualidade.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 3
+    },
+    {
+      "id": "q015",
+      "module": "Big Data",
+      "q": "Três Vs podem ocorrer juntos em um app de vídeos. Qual associação é coerente?",
+      "options": [
+        "Volume=utilidade; Velocidade=formato; Variedade=qualidade",
+        "Volume=quantidade; Velocidade=rapidez; Variedade=tipos",
+        "Volume=precisão; Velocidade=confiabilidade; Variedade=retorno",
+        "Volume=autoconsciência; Velocidade=rede neural; Variedade=KPI"
+      ],
+      "correct": 1,
+      "explain": "Essa é a correspondência didática adotada para os Vs listados nos slides.",
+      "source": "Aula 1 · p. 9 + complemento",
+      "difficulty": 2
+    },
+    {
+      "id": "q016",
+      "module": "Raciocínio Lógico",
+      "q": "“Todo mamífero é animal; gato é mamífero; logo gato é animal” representa…",
+      "options": [
+        "Indução",
+        "Abdução",
+        "Dedução",
+        "Crítica"
+      ],
+      "correct": 2,
+      "explain": "A conclusão particular decorre de premissas gerais.",
+      "source": "Aula 5 · pp. 3–5",
+      "difficulty": 1
+    },
+    {
+      "id": "q017",
+      "module": "Raciocínio Lógico",
+      "q": "Observar muitos exemplos e propor uma regra geral provável é…",
+      "options": [
+        "Indução",
+        "Dedução",
+        "Abdução",
+        "Análise"
+      ],
+      "correct": 0,
+      "explain": "A indução generaliza a partir de casos particulares.",
+      "source": "Aula 5 · pp. 6–8",
+      "difficulty": 1
+    },
+    {
+      "id": "q018",
+      "module": "Raciocínio Lógico",
+      "q": "A luz não acende; talvez a lâmpada esteja queimada. Isso é…",
+      "options": [
+        "Dedução",
+        "Crítica",
+        "Indução",
+        "Abdução"
+      ],
+      "correct": 3,
+      "explain": "Observação seguida de hipótese explicativa plausível.",
+      "source": "Aula 5 · pp. 9–11",
+      "difficulty": 1
+    },
+    {
+      "id": "q019",
+      "module": "Raciocínio Lógico",
+      "q": "Dividir um bug grande em serviços menores para investigar exemplifica…",
+      "options": [
+        "Abdução",
+        "Raciocínio analítico",
+        "Raciocínio indutivo",
+        "Raciocínio dedutivo"
+      ],
+      "correct": 1,
+      "explain": "Analítico significa decompor um problema em partes menores.",
+      "source": "Aula 5 · pp. 12–14",
+      "difficulty": 1
+    },
+    {
+      "id": "q020",
+      "module": "Raciocínio Lógico",
+      "q": "Examinar premissas e evidências antes de aceitar uma afirmação corresponde a…",
+      "options": [
+        "Analítico",
+        "Dedutivo",
+        "Crítico",
+        "Indutivo"
+      ],
+      "correct": 2,
+      "explain": "Crítico avalia validade, evidências e limitações.",
+      "source": "Aula 5 · pp. 15–17",
+      "difficulty": 1
+    },
+    {
+      "id": "q021",
+      "module": "Raciocínio Lógico",
+      "q": "Qual tipo pode oferecer conclusão apenas provável a partir de exemplos?",
+      "options": [
+        "Indutivo",
+        "Dedutivo com premissas válidas",
+        "Analítico",
+        "Crítico sempre"
+      ],
+      "correct": 0,
+      "explain": "O slide 6 ressalta que indução não garante conclusão absolutamente verdadeira.",
+      "source": "Aula 5 · p. 6",
+      "difficulty": 2
+    },
+    {
+      "id": "q022",
+      "module": "Raciocínio Lógico",
+      "q": "A explicação “talvez o banco esteja fora do ar” para um erro 500 é…",
+      "options": [
+        "Dedutiva",
+        "Indutiva",
+        "Puramente analítica",
+        "Abdutiva"
+      ],
+      "correct": 3,
+      "explain": "O fato gera uma hipótese explicativa a verificar.",
+      "source": "Aula 5 · p. 9",
+      "difficulty": 2
+    },
+    {
+      "id": "q023",
+      "module": "Raciocínio Lógico",
+      "q": "Qual estrutura é associada ao silogismo no PDF?",
+      "options": [
+        "Três exemplos e um palpite",
+        "Duas premissas e uma conclusão",
+        "Uma pergunta e um gráfico",
+        "Dois gráficos e uma métrica"
+      ],
+      "correct": 1,
+      "explain": "A p. 3 apresenta duas premissas e uma conclusão.",
+      "source": "Aula 5 · p. 3",
+      "difficulty": 2
+    },
+    {
+      "id": "q024",
+      "module": "Raciocínio Lógico",
+      "q": "“Dividir o problema” e “avaliar as evidências” remetem, respectivamente, a…",
+      "options": [
+        "Crítico e dedutivo",
+        "Abdutivo e indutivo",
+        "Analítico e crítico",
+        "Indutivo e analítico"
+      ],
+      "correct": 2,
+      "explain": "Analítico decompõe; crítico julga argumentos/evidências.",
+      "source": "Aula 5 · pp. 12–17",
+      "difficulty": 2
+    },
+    {
+      "id": "q025",
+      "module": "Raciocínio Lógico",
+      "q": "“Nas 20 últimas segundas houve trânsito; provavelmente haverá na próxima.” É…",
+      "options": [
+        "Indutivo",
+        "Abdutivo",
+        "Dedutivo",
+        "Analítico"
+      ],
+      "correct": 0,
+      "explain": "Há generalização/projeção baseada em várias observações.",
+      "source": "Aula 5 · pp. 6–8",
+      "difficulty": 2
+    },
+    {
+      "id": "q026",
+      "module": "Raciocínio Lógico",
+      "q": "“Todos os funcionários com crachá entram. Ana tem crachá. Logo, Ana entra.” É…",
+      "options": [
+        "Crítico",
+        "Indutivo",
+        "Abdutivo",
+        "Dedutivo"
+      ],
+      "correct": 3,
+      "explain": "Aplicação de regra geral a caso específico.",
+      "source": "Aula 5 · pp. 3–5",
+      "difficulty": 2
+    },
+    {
+      "id": "q027",
+      "module": "Raciocínio Lógico",
+      "q": "Uma hipótese abdutiva…",
+      "options": [
+        "é necessariamente verdadeira",
+        "pode ser plausível sem estar confirmada",
+        "tem que conter análise de desempenho",
+        "sempre parte de regra universal"
+      ],
+      "correct": 1,
+      "explain": "A abdução propõe explicação plausível quando faltam informações.",
+      "source": "Aula 5 · p. 9",
+      "difficulty": 3
+    },
+    {
+      "id": "q028",
+      "module": "Raciocínio Lógico",
+      "q": "Ao julgar se uma amostra enviesada sustenta um argumento, emprega-se especialmente…",
+      "options": [
+        "Raciocínio dedutivo",
+        "Raciocínio abdutivo",
+        "Raciocínio crítico",
+        "Raciocínio apenas analítico"
+      ],
+      "correct": 2,
+      "explain": "O processo central é verificar qualidade de evidências e limites.",
+      "source": "Aula 5 · pp. 15–17",
+      "difficulty": 3
+    },
+    {
+      "id": "q029",
+      "module": "Ciência de Dados",
+      "q": "Quais disciplinas aparecem na definição multidisciplinar de Data Science?",
+      "options": [
+        "Design, UX, fotografia e áudio",
+        "Marketing, vendas, RH e direito",
+        "Hardware, redes e cabos",
+        "Computação, Estatística, Matemática e Negócio"
+      ],
+      "correct": 3,
+      "explain": "A Aula 1, p. 3, enumera essas quatro disciplinas.",
+      "source": "Aula 1 · p. 3",
+      "difficulty": 1
+    },
+    {
+      "id": "q030",
+      "module": "Ciência de Dados",
+      "q": "Segundo o quadro da aula, Business Analyst está mais ligado a…",
+      "options": [
+        "interpretar dados em relação ao negócio",
+        "fabricar circuitos eletrônicos",
+        "simular apenas sensores",
+        "apagar dados inválidos"
+      ],
+      "correct": 0,
+      "explain": "O slide da p. 6 define o foco no negócio.",
+      "source": "Aula 1 · p. 6",
+      "difficulty": 1
+    },
+    {
+      "id": "q031",
+      "module": "Ciência de Dados",
+      "q": "O cientista de dados, conforme slides, participa de…",
+      "options": [
+        "montagem de servidores apenas",
+        "formulação de problemas, hipóteses e análise de resultados",
+        "somente compra de licenças",
+        "apenas criação de dashboards"
+      ],
+      "correct": 1,
+      "explain": "A p. 5 atribui essas atividades ao Data Scientist.",
+      "source": "Aula 1 · p. 5",
+      "difficulty": 2
+    },
+    {
+      "id": "q032",
+      "module": "Ciência de Dados",
+      "q": "Qual função foca analisar os dados disponibilizados para resolver problemas no resumo da aula?",
+      "options": [
+        "Business Analyst",
+        "Gerente de vendas",
+        "Data Analyst",
+        "Designer"
+      ],
+      "correct": 2,
+      "explain": "A p. 7 apresenta essa atribuição ao Data Analyst.",
+      "source": "Aula 1 · p. 7",
+      "difficulty": 1
+    },
+    {
+      "id": "q033",
+      "module": "Inteligência Artificial",
+      "q": "Segundo os slides, IA está relacionada à capacidade de…",
+      "options": [
+        "converter dados apenas em PDF",
+        "emular certas capacidades do raciocínio humano",
+        "substituir processadores físicos",
+        "apenas armazenar tabelas"
+      ],
+      "correct": 1,
+      "explain": "Aula 1, p. 12, inclui perceber variáveis e resolver problemas.",
+      "source": "Aula 1 · p. 12",
+      "difficulty": 1
+    },
+    {
+      "id": "q034",
+      "module": "Inteligência Artificial",
+      "q": "Qual abordagem de IA manipula explicitamente símbolos e regras?",
+      "options": [
+        "Simbólica",
+        "Conexionista",
+        "Evolucionária apenas",
+        "Hardware"
+      ],
+      "correct": 0,
+      "explain": "A p. 32 define a abordagem simbólica.",
+      "source": "Aula 1 · p. 32",
+      "difficulty": 2
+    },
+    {
+      "id": "q035",
+      "module": "Inteligência Artificial",
+      "q": "Qual abordagem se inspira em neurônios e conexões?",
+      "options": [
+        "Simbólica",
+        "BI",
+        "Conexionista",
+        "Coleta"
+      ],
+      "correct": 2,
+      "explain": "A p. 33 liga conexionismo ao funcionamento dos neurônios.",
+      "source": "Aula 1 · p. 33",
+      "difficulty": 1
+    },
+    {
+      "id": "q036",
+      "module": "Inteligência Artificial",
+      "q": "Que parâmetros são ajustados no treinamento de redes neurais descrito na aula?",
+      "options": [
+        "Tamanho do teclado",
+        "Brilho da tela",
+        "Largura da conexão física",
+        "Pesos das conexões"
+      ],
+      "correct": 3,
+      "explain": "Aula 1, pp. 35–36, menciona os pesos.",
+      "source": "Aula 1 · pp. 35–36",
+      "difficulty": 2
+    },
+    {
+      "id": "q037",
+      "module": "Inteligência Artificial",
+      "q": "Qual relação está de acordo com os slides?",
+      "options": [
+        "Deep Learning faz parte do ML, que faz parte da IA",
+        "IA é uma subárea de ML",
+        "ML sempre dispensa dados",
+        "Todas as IAs são redes profundas"
+      ],
+      "correct": 0,
+      "explain": "As pp. 56 e 62 estabelecem essa relação.",
+      "source": "Aula 1 · pp. 56–62",
+      "difficulty": 1
+    },
+    {
+      "id": "q038",
+      "module": "Inteligência Artificial",
+      "q": "Recomendação de filmes com base no histórico é citada como uso de…",
+      "options": [
+        "Auditoria contábil",
+        "Apenas CRM",
+        "Machine Learning",
+        "Silogismo"
+      ],
+      "correct": 2,
+      "explain": "A p. 67 exemplifica ML nas recomendações de streaming.",
+      "source": "Aula 1 · p. 67",
+      "difficulty": 1
+    },
+    {
+      "id": "q039",
+      "module": "Inteligência Artificial",
+      "q": "O uso de IA para antecipar falhas em equipamentos denomina-se…",
+      "options": [
+        "Manutenção preditiva",
+        "Volume de dados",
+        "Raciocínio dedutivo",
+        "Publicidade tradicional"
+      ],
+      "correct": 0,
+      "explain": "A aula 1, p. 55, nomeia esse caso.",
+      "source": "Aula 1 · p. 55",
+      "difficulty": 1
+    },
+    {
+      "id": "q040",
+      "module": "Inteligência Artificial",
+      "q": "No contraste dos slides, IA fraca é caracterizada por…",
+      "options": [
+        "autoconsciência garantida",
+        "funcionalidades específicas sem autoconsciência",
+        "resolver todos os problemas humanos",
+        "não usar software"
+      ],
+      "correct": 1,
+      "explain": "As pp. 42–43 destacam aplicações específicas.",
+      "source": "Aula 1 · pp. 42–43",
+      "difficulty": 2
+    },
+    {
+      "id": "q041",
+      "module": "Inteligência Artificial",
+      "q": "O texto da aula descreve Machine Learning como sistemas que…",
+      "options": [
+        "só executam instruções imutáveis",
+        "não podem usar dados",
+        "dispensam treinamento",
+        "modificam comportamento com base em experiência"
+      ],
+      "correct": 3,
+      "explain": "Aula 1, p. 59, trata de adaptação pelo treinamento.",
+      "source": "Aula 1 · p. 59",
+      "difficulty": 2
+    },
+    {
+      "id": "q042",
+      "module": "Inteligência Artificial",
+      "q": "Um programa que converte instruções em sequência lógica ilustra conceito de…",
+      "options": [
+        "KPI",
+        "Veracidade",
+        "Algoritmo",
+        "Ticket médio"
+      ],
+      "correct": 2,
+      "explain": "As pp. 18–21 ressaltam o papel de algoritmos como sequências de passos.",
+      "source": "Aula 1 · pp. 18–21",
+      "difficulty": 1
+    },
+    {
+      "id": "q043",
+      "module": "Business Intelligence",
+      "q": "Business Intelligence é, na aula, um processo de…",
+      "options": [
+        "somente criação de slides",
+        "coleta, análise e conversão de dados em informação útil",
+        "apenas armazenamento bruto",
+        "apenas segurança da informação"
+      ],
+      "correct": 1,
+      "explain": "O slide 68 apresenta a definição central.",
+      "source": "Aula 1 · p. 68",
+      "difficulty": 1
+    },
+    {
+      "id": "q044",
+      "module": "Business Intelligence",
+      "q": "Quais são os três pilares de BI citados?",
+      "options": [
+        "Volume, Velocidade, Valor",
+        "Coleta, Backup, Rede",
+        "Estratégico, Analítico e Operacional",
+        "Software, Hardware, Rede"
+      ],
+      "correct": 2,
+      "explain": "Aula 1, pp. 73–76, apresenta os três pilares.",
+      "source": "Aula 1 · pp. 73–76",
+      "difficulty": 1
+    },
+    {
+      "id": "q045",
+      "module": "Business Intelligence",
+      "q": "O pilar operacional do BI enfatiza…",
+      "options": [
+        "execução de ações planejadas",
+        "somente armazenar logs",
+        "retirar acesso a dashboards",
+        "apenas definição das metas"
+      ],
+      "correct": 0,
+      "explain": "Aula 1, p. 76, descreve aplicação operacional.",
+      "source": "Aula 1 · p. 76",
+      "difficulty": 2
+    },
+    {
+      "id": "q046",
+      "module": "Business Intelligence",
+      "q": "Qual é a última etapa do ciclo de BI conforme Aula 1?",
+      "options": [
+        "Compra de computadores",
+        "Coleta manual",
+        "Backup dos emails",
+        "Acompanhamento de performance"
+      ],
+      "correct": 3,
+      "explain": "A p. 77 e a p. 84 encerram o processo com monitoramento dos resultados.",
+      "source": "Aula 1 · pp. 77–84",
+      "difficulty": 2
+    },
+    {
+      "id": "q047",
+      "module": "Business Intelligence",
+      "q": "Qual afirmação é correta?",
+      "options": [
+        "BI é exatamente Power BI",
+        "Power BI é um exemplo de ferramenta; BI é um conceito/processo",
+        "BI significa inteligência artificial forte",
+        "BI não utiliza dados"
+      ],
+      "correct": 1,
+      "explain": "Os slides explicam BI como processo de dados para decisão; uma ferramenta não equivale ao conceito.",
+      "source": "Aula 1 · p. 68 + distinção complementar",
+      "difficulty": 2
+    },
+    {
+      "id": "q048",
+      "module": "Business Intelligence",
+      "q": "Depois da coleta, a etapa indicada para organizar e interpretar dados é…",
+      "options": [
+        "Criação de hardware",
+        "Ignorar o processo",
+        "Análise de dados",
+        "Arquivamento sem consulta"
+      ],
+      "correct": 2,
+      "explain": "O slide 80 destaca organização e análise após a coleta.",
+      "source": "Aula 1 · p. 80",
+      "difficulty": 1
+    },
+    {
+      "id": "q049",
+      "module": "Coleta de Dados",
+      "q": "A coleta de dados busca…",
+      "options": [
+        "capturar conteúdo estratégico que possa ser analisado",
+        "gerar respostas sem observar fatos",
+        "reduzir qualidade dos dados",
+        "somente publicar posts"
+      ],
+      "correct": 0,
+      "explain": "Aula 2, p. 8, fala em captação de conteúdo estratégico.",
+      "source": "Aula 2 · p. 8",
+      "difficulty": 1
+    },
+    {
+      "id": "q050",
+      "module": "Coleta de Dados",
+      "q": "KPIs são…",
+      "options": [
+        "exclusivamente gráficos coloridos",
+        "indicadores estratégicos de acompanhamento",
+        "tipos de algoritmo evolutivo",
+        "programas de segurança"
+      ],
+      "correct": 1,
+      "explain": "Aula 2, p. 18, define KPIs como indicadores estratégicos.",
+      "source": "Aula 2 · p. 18",
+      "difficulty": 1
+    },
+    {
+      "id": "q051",
+      "module": "Coleta de Dados",
+      "q": "Qual métrica é citada como exemplo de KPI na Aula 2?",
+      "options": [
+        "Volume de ar",
+        "Velocidade de upload",
+        "Ticket médio de e-commerce",
+        "Tamanho do teclado"
+      ],
+      "correct": 2,
+      "explain": "Aula 2, p. 18, apresenta o ticket médio.",
+      "source": "Aula 2 · p. 18",
+      "difficulty": 1
+    },
+    {
+      "id": "q052",
+      "module": "Coleta de Dados",
+      "q": "Antes da coleta, é recomendado definir…",
+      "options": [
+        "nome fantasia apenas",
+        "preço de servidores sempre",
+        "quantas páginas terá um relatório",
+        "objetivos e planejamento"
+      ],
+      "correct": 3,
+      "explain": "O PDF enfatiza objetivos claros e planejamento.",
+      "source": "Aula 2 · pp. 29–35",
+      "difficulty": 1
+    },
+    {
+      "id": "q053",
+      "module": "Coleta de Dados",
+      "q": "Para captar satisfação pós-compra, a aula sugere principalmente…",
+      "options": [
+        "Formulários",
+        "Compiladores",
+        "Roteadores",
+        "Antivírus"
+      ],
+      "correct": 0,
+      "explain": "Aula 2, p. 41, cita formulários em avaliações pós-compra.",
+      "source": "Aula 2 · p. 41",
+      "difficulty": 1
+    },
+    {
+      "id": "q054",
+      "module": "Coleta de Dados",
+      "q": "A ferramenta citada para monitoramento de métricas de sites e e-commerce é…",
+      "options": [
+        "Editor de imagens",
+        "Google Analytics",
+        "Terminal Linux",
+        "IDE Java"
+      ],
+      "correct": 1,
+      "explain": "Aula 2, p. 42, descreve Google Analytics para métricas digitais.",
+      "source": "Aula 2 · p. 42",
+      "difficulty": 2
+    },
+    {
+      "id": "q055",
+      "module": "Coleta de Dados",
+      "q": "Segundo a Aula 2, dados sem análise…",
+      "options": [
+        "sempre viram decisões certas",
+        "substituem automaticamente KPIs",
+        "não geram todo seu potencial como informação",
+        "são sempre inválidos"
+      ],
+      "correct": 2,
+      "explain": "A p. 36 salienta que análise transforma dados em informação.",
+      "source": "Aula 2 · p. 36",
+      "difficulty": 2
+    },
+    {
+      "id": "q056",
+      "module": "Coleta de Dados",
+      "q": "A descrição de plataforma que cria materiais interativos para captar interações remete a…",
+      "options": [
+        "UpMiner",
+        "MongoDB",
+        "Google Analytics",
+        "Ion"
+      ],
+      "correct": 3,
+      "explain": "Aula 2, p. 44, descreve Ion nesses termos.",
+      "source": "Aula 2 · p. 44",
+      "difficulty": 3
+    },
+    {
+      "id": "q057",
+      "module": "Ética e Confiança",
+      "q": "A ética dos dados, segundo a Aula 3, trata apenas de privacidade?",
+      "options": [
+        "Não, inclui toda a cadeia e consequências morais",
+        "Sim, só privacidade",
+        "Sim, só criptografia",
+        "Sim, só armazenamento"
+      ],
+      "correct": 0,
+      "explain": "As pp. 6–9 ampliam ética a todas as etapas do ciclo.",
+      "source": "Aula 3 · pp. 6–9",
+      "difficulty": 1
+    },
+    {
+      "id": "q058",
+      "module": "Ética e Confiança",
+      "q": "O risco de tratamento injusto por sistemas baseados em dados é…",
+      "options": [
+        "Volume de dados",
+        "Discriminação algorítmica",
+        "Normalização de dados",
+        "Velocidade de rede"
+      ],
+      "correct": 1,
+      "explain": "As pp. 26–28 abordam discriminação algorítmica.",
+      "source": "Aula 3 · pp. 26–28",
+      "difficulty": 2
+    },
+    {
+      "id": "q059",
+      "module": "Ética e Confiança",
+      "q": "Os slides recomendam para incidentes de exposição de dados…",
+      "options": [
+        "ignorar vazamentos",
+        "eliminar auditorias",
+        "segurança e plano de resposta a incidentes",
+        "aumentar somente o volume"
+      ],
+      "correct": 2,
+      "explain": "As pp. 29–31 defendem medidas de prevenção e resposta.",
+      "source": "Aula 3 · pp. 29–31",
+      "difficulty": 2
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma empresa possui 4 PB de registros históricos, mas faz poucas consultas diárias. Qual V é mais evidente?",
+      "options": [
+        "Valor",
+        "Variedade",
+        "Volume",
+        "Velocidade"
+      ],
+      "correct": 2,
+      "explain": "O destaque é a quantidade acumulada de dados, independentemente da frequência das consultas.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q001",
+      "topic_priority": "máxima",
+      "explain_short": "O destaque é a quantidade acumulada de dados, independentemente da frequência das consultas."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma bolsa de valores recebe alterações em milissegundos e exige reação imediata. Qual V domina?",
+      "options": [
+        "Velocidade",
+        "Veracidade",
+        "Volume",
+        "Valor"
+      ],
+      "correct": 0,
+      "explain": "A ênfase está na rapidez com que dados chegam e precisam ser processados.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q002",
+      "topic_priority": "máxima",
+      "explain_short": "A ênfase está na rapidez com que dados chegam e precisam ser processados."
+    },
+    {
+      "module": "Big Data",
+      "q": "Um sistema reúne contratos em PDF, fotos, logs em JSON e tabelas SQL. Qual característica foi destacada?",
+      "options": [
+        "Veracidade",
+        "Volume",
+        "Valor",
+        "Variedade"
+      ],
+      "correct": 3,
+      "explain": "Diversidade de fontes, estruturas e formatos descreve variedade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q003",
+      "topic_priority": "máxima",
+      "explain_short": "Diversidade de fontes, estruturas e formatos descreve variedade."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma clínica descobre que parte dos cadastros contém datas de nascimento impossíveis. O problema é de…",
+      "options": [
+        "Variedade",
+        "Veracidade",
+        "Velocidade",
+        "Volume"
+      ],
+      "correct": 1,
+      "explain": "A presença de erros e inconsistências reduz a confiabilidade dos dados.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q004",
+      "topic_priority": "máxima",
+      "explain_short": "A presença de erros e inconsistências reduz a confiabilidade dos dados."
+    },
+    {
+      "module": "Big Data",
+      "q": "A rede varejista cruza dados de venda para prever ruptura de estoque e reduzir perdas. O benefício exemplifica…",
+      "options": [
+        "Valor",
+        "Velocidade",
+        "Variedade",
+        "Volume"
+      ],
+      "correct": 0,
+      "explain": "Valor expressa utilidade prática e melhores decisões extraídas dos dados.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q005",
+      "topic_priority": "máxima",
+      "explain_short": "Valor expressa utilidade prática e melhores decisões extraídas dos dados."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma rede recebe mensagens, áudios e vídeos em tempo real. Qual par de Vs é diretamente mostrado?",
+      "options": [
+        "Veracidade e valor",
+        "Variedade e velocidade",
+        "Volume e veracidade",
+        "Valor e volume"
+      ],
+      "correct": 1,
+      "explain": "Há diferentes formatos e rapidez na entrada dos eventos; volume não foi quantificado.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q006",
+      "topic_priority": "máxima",
+      "explain_short": "Há diferentes formatos e rapidez na entrada dos eventos; volume não foi quantificado."
+    },
+    {
+      "module": "Big Data",
+      "q": "Qual afirmação é a mais precisa sobre Big Data segundo o slide?",
+      "options": [
+        "Exige exatamente 1 TB de informação",
+        "Sempre envolve inteligência artificial",
+        "Lida com conjuntos muito grandes ou complexos para tratamento tradicional",
+        "Significa qualquer banco relacional"
+      ],
+      "correct": 2,
+      "explain": "O PDF aponta a escala/complexidade que desafia ferramentas tradicionais, sem um limite universal de tamanho.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q007",
+      "topic_priority": "máxima",
+      "explain_short": "O PDF aponta a escala/complexidade que desafia ferramentas tradicionais, sem um limite universal de tamanho."
+    },
+    {
+      "module": "Big Data",
+      "q": "Um e-commerce armazena bilhões de cliques. Só essa informação NÃO comprova qual dimensão?",
+      "options": [
+        "Volume",
+        "Acúmulo de registros",
+        "Grandeza do conjunto",
+        "Valor de negócio"
+      ],
+      "correct": 3,
+      "explain": "Existir muito dado não implica que ele gere alguma utilidade de negócio.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q008",
+      "topic_priority": "máxima",
+      "explain_short": "Existir muito dado não implica que ele gere alguma utilidade de negócio."
+    },
+    {
+      "module": "Big Data",
+      "q": "Um app processa apenas 500 dados por segundo, mas cada registro precisa ser analisado em 5 ms. O foco é…",
+      "options": [
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Volume"
+      ],
+      "correct": 0,
+      "explain": "A exigência temporal de processamento caracteriza velocidade, mesmo sem enorme quantidade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q009",
+      "topic_priority": "máxima",
+      "explain_short": "A exigência temporal de processamento caracteriza velocidade, mesmo sem enorme quantidade."
+    },
+    {
+      "module": "Big Data",
+      "q": "A presença de milhões de arquivos idênticos afeta principalmente qual V?",
+      "options": [
+        "Variedade",
+        "Veracidade",
+        "Volume",
+        "Valor"
+      ],
+      "correct": 2,
+      "explain": "A quantidade pode ser grande sem diversidade de tipos de arquivo.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q010",
+      "topic_priority": "máxima",
+      "explain_short": "A quantidade pode ser grande sem diversidade de tipos de arquivo."
+    },
+    {
+      "module": "Big Data",
+      "q": "Qual par apresenta corretamente conceito e pergunta orientadora?",
+      "options": [
+        "Valor — quais formatos?",
+        "Variedade — quais formatos?",
+        "Volume — são confiáveis?",
+        "Veracidade — quanto tempo?"
+      ],
+      "correct": 1,
+      "explain": "Variedade se refere à diversidade de formatos, fontes e estruturas.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q011",
+      "topic_priority": "máxima",
+      "explain_short": "Variedade se refere à diversidade de formatos, fontes e estruturas."
+    },
+    {
+      "module": "Big Data",
+      "q": "Se dados foram coletados muito rapidamente, mas 40% são duplicados, temos dois aspectos:",
+      "options": [
+        "Velocidade alta e veracidade comprometida",
+        "Variedade alta e valor garantido",
+        "Valor alto e volume nulo",
+        "Veracidade alta e velocidade nula"
+      ],
+      "correct": 0,
+      "explain": "Rapidez de geração e qualidade/confiabilidade são dimensões diferentes.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q012",
+      "topic_priority": "máxima",
+      "explain_short": "Rapidez de geração e qualidade/confiabilidade são dimensões diferentes."
+    },
+    {
+      "module": "Big Data",
+      "q": "O mesmo dado é útil para personalização, mas foi coletado com erro. Que dois Vs entram em tensão?",
+      "options": [
+        "Volume e variedade",
+        "Velocidade e volume",
+        "Valor e veracidade",
+        "Variedade e velocidade"
+      ],
+      "correct": 2,
+      "explain": "Utilidade (valor) e confiança na informação (veracidade) não são a mesma propriedade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q013",
+      "topic_priority": "máxima",
+      "explain_short": "Utilidade (valor) e confiança na informação (veracidade) não são a mesma propriedade."
+    },
+    {
+      "module": "Big Data",
+      "q": "Milhões de vídeos de um único tipo de arquivo são destaque sobretudo para…",
+      "options": [
+        "Volume",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 0,
+      "explain": "Muitos arquivos do mesmo formato indicam quantidade; não necessariamente diversidade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q014",
+      "topic_priority": "máxima",
+      "explain_short": "Muitos arquivos do mesmo formato indicam quantidade; não necessariamente diversidade."
+    },
+    {
+      "module": "Big Data",
+      "q": "A equipe garante que os registros foram validados, mas ainda não decidiu o que fazer com eles. Qual V foi tratado primeiro?",
+      "options": [
+        "Valor",
+        "Veracidade",
+        "Variedade",
+        "Velocidade"
+      ],
+      "correct": 1,
+      "explain": "Validação de precisão e confiabilidade corresponde à veracidade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q015",
+      "topic_priority": "máxima",
+      "explain_short": "Validação de precisão e confiabilidade corresponde à veracidade."
+    },
+    {
+      "module": "Big Data",
+      "q": "Qual é uma interpretação equivocada dos Vs?",
+      "options": [
+        "Eles podem coexistir numa situação",
+        "Eles ajudam a descrever desafios",
+        "Uma aplicação pode destacar Vs diferentes",
+        "Todo sistema apresenta obrigatoriamente os cinco Vs no mesmo grau"
+      ],
+      "correct": 3,
+      "explain": "As intensidades e desafios variam; o uso dos cinco conceitos não implica uniformidade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q016",
+      "topic_priority": "máxima",
+      "explain_short": "As intensidades e desafios variam; o uso dos cinco conceitos não implica uniformidade."
+    },
+    {
+      "module": "Big Data",
+      "q": "Um serviço transforma dados de localização em previsão de chegada útil para o cliente. A decisão central revela…",
+      "options": [
+        "Volume",
+        "Variedade",
+        "Valor",
+        "Veracidade"
+      ],
+      "correct": 2,
+      "explain": "A utilidade produzida a partir dos dados é a característica central do exemplo.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q017",
+      "topic_priority": "máxima",
+      "explain_short": "A utilidade produzida a partir dos dados é a característica central do exemplo."
+    },
+    {
+      "module": "Big Data",
+      "q": "Um sistema tem arquivos de vídeo, texto e sensor, porém nenhum deles é confiável. É correto afirmar que…",
+      "options": [
+        "Variedade e veracidade podem ser avaliadas separadamente",
+        "Variedade garante veracidade",
+        "Mais formatos significam mais valor",
+        "A qualidade independe totalmente da análise"
+      ],
+      "correct": 0,
+      "explain": "Ter formatos diversos não prova que o conteúdo seja confiável.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q018",
+      "topic_priority": "máxima",
+      "explain_short": "Ter formatos diversos não prova que o conteúdo seja confiável."
+    },
+    {
+      "module": "Big Data",
+      "q": "A plataforma enfrenta gargalo porque eventos chegam mais rápido do que consegue processar. Qual é o principal desafio?",
+      "options": [
+        "Valor",
+        "Velocidade",
+        "Variedade",
+        "Veracidade"
+      ],
+      "correct": 1,
+      "explain": "A taxa de entrada supera a capacidade de tratamento em tempo útil.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q019",
+      "topic_priority": "máxima",
+      "explain_short": "A taxa de entrada supera a capacidade de tratamento em tempo útil."
+    },
+    {
+      "module": "Big Data",
+      "q": "Qual exemplo demonstra melhor veracidade, e não valor?",
+      "options": [
+        "A campanha aumentou as vendas",
+        "Os sensores enviam dados a cada segundo",
+        "O conjunto mistura áudio e fotos",
+        "A empresa remove duplicidades e corrige campos inválidos"
+      ],
+      "correct": 3,
+      "explain": "Correção de inconsistências melhora a precisão e confiabilidade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q020",
+      "topic_priority": "máxima",
+      "explain_short": "Correção de inconsistências melhora a precisão e confiabilidade."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma equipe trocou tabelas em SQL por eventos JSON e imagens, mas o número total de registros não mudou. O que cresceu?",
+      "options": [
+        "Variedade",
+        "Volume necessariamente",
+        "Valor necessariamente",
+        "Veracidade necessariamente"
+      ],
+      "correct": 0,
+      "explain": "A diversidade de formatos aumentou, não havendo evidência de aumento nas outras dimensões.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q021",
+      "topic_priority": "máxima",
+      "explain_short": "A diversidade de formatos aumentou, não havendo evidência de aumento nas outras dimensões."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma empresa tem só dados de vendas atualizados diariamente, mas extrai ganhos expressivos com eles. O que se pode concluir?",
+      "options": [
+        "Há necessariamente alta velocidade",
+        "O valor pode existir sem grande variedade",
+        "O volume cresce sempre",
+        "Veracidade deixa de ser importante"
+      ],
+      "correct": 1,
+      "explain": "Utilidade de negócio não exige obrigatoriamente alta diversidade de formatos.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q022",
+      "topic_priority": "máxima",
+      "explain_short": "Utilidade de negócio não exige obrigatoriamente alta diversidade de formatos."
+    },
+    {
+      "module": "Big Data",
+      "q": "O slide da Aula 1 enumera explicitamente quantos Vs?",
+      "options": [
+        "Três",
+        "Quatro",
+        "Cinco",
+        "Seis"
+      ],
+      "correct": 2,
+      "explain": "A p. 9 registra cinco: velocidade, volume, variedade, veracidade e valor.",
+      "source": "Aula 1 · p. 9",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q023",
+      "topic_priority": "máxima",
+      "explain_short": "A p. 9 registra cinco: velocidade, volume, variedade, veracidade e valor."
+    },
+    {
+      "module": "Big Data",
+      "q": "Segundo o PDF, o suposto sexto V possui qual definição obrigatória?",
+      "options": [
+        "Variabilidade",
+        "Visualização",
+        "Viscosidade",
+        "O PDF não especifica um sexto V"
+      ],
+      "correct": 3,
+      "explain": "O slide apresenta cinco Vs. Não atribua uma sexta definição ao material sem evidência.",
+      "source": "Aula 1 · p. 9",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q024",
+      "topic_priority": "máxima",
+      "explain_short": "O slide apresenta cinco Vs. Não atribua uma sexta definição ao material sem evidência."
+    },
+    {
+      "module": "Big Data",
+      "q": "Qual escolha explica corretamente por que 5 Vs não são uma fórmula matemática?",
+      "options": [
+        "São perspectivas para caracterizar dados, não unidades de medida padronizadas",
+        "Representam as cinco fases obrigatórias do BI",
+        "São bancos de dados distintos",
+        "São cinco linguagens de programação"
+      ],
+      "correct": 0,
+      "explain": "Os Vs descrevem dimensões conceituais e são úteis para interpretar cenários.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q025",
+      "topic_priority": "máxima",
+      "explain_short": "Os Vs descrevem dimensões conceituais e são úteis para interpretar cenários."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma cooperativa cruza documentos diferentes e consegue detectar fraudes. Qual leitura é adequada?",
+      "options": [
+        "Só existe variedade",
+        "Existem variedade e valor no cenário",
+        "Só existe veracidade",
+        "Não existe Big Data sem IA"
+      ],
+      "correct": 1,
+      "explain": "Fontes heterogêneas sugerem variedade e detectar fraude sugere valor.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q026",
+      "topic_priority": "máxima",
+      "explain_short": "Fontes heterogêneas sugerem variedade e detectar fraude sugere valor."
+    },
+    {
+      "module": "Big Data",
+      "q": "Qual exemplo enfatiza velocidade sem apontar necessariamente grande volume?",
+      "options": [
+        "Arquivo histórico de 10 TB",
+        "Mil fotos em formatos diferentes",
+        "Um sensor gera um único alerta que exige reação em 30 ms",
+        "Uma planilha de preços conferida por auditor"
+      ],
+      "correct": 2,
+      "explain": "Uma exigência temporal rigorosa caracteriza velocidade mesmo em evento isolado.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q027",
+      "topic_priority": "máxima",
+      "explain_short": "Uma exigência temporal rigorosa caracteriza velocidade mesmo em evento isolado."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma empresa investiu em armazenamento, mas não sabe qual decisão quer tomar. O V mais negligenciado é…",
+      "options": [
+        "Veracidade",
+        "Volume",
+        "Velocidade",
+        "Valor"
+      ],
+      "correct": 3,
+      "explain": "Falta finalidade/benefício para o negócio, aspecto associado ao valor.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q028",
+      "topic_priority": "máxima",
+      "explain_short": "Falta finalidade/benefício para o negócio, aspecto associado ao valor."
+    },
+    {
+      "module": "Big Data",
+      "q": "Uma tabela tem milhões de linhas, incluindo CPFs inconsistentes. O par de características diretamente envolvido é…",
+      "options": [
+        "Volume e veracidade",
+        "Variedade e velocidade",
+        "Velocidade e valor",
+        "Veracidade e variedade"
+      ],
+      "correct": 0,
+      "explain": "Muitos registros dizem respeito ao volume e inconsistências afetam veracidade.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q029",
+      "topic_priority": "máxima",
+      "explain_short": "Muitos registros dizem respeito ao volume e inconsistências afetam veracidade."
+    },
+    {
+      "module": "Big Data",
+      "q": "Qual das alternativas é um contraste correto?",
+      "options": [
+        "Volume mede confiabilidade e veracidade mede quantidade",
+        "Velocidade diz respeito ao tempo e volume à quantidade",
+        "Valor é igual a formato de arquivo",
+        "Variedade e velocidade sempre crescem juntas"
+      ],
+      "correct": 1,
+      "explain": "Volume está ligado ao quanto; velocidade, à rapidez.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q030",
+      "topic_priority": "máxima",
+      "explain_short": "Volume está ligado ao quanto; velocidade, à rapidez."
+    },
+    {
+      "module": "Big Data",
+      "q": "Ao pedir a um time “demonstre que os dados ajudam a reduzir custos”, qual V está sendo questionado?",
+      "options": [
+        "Variedade",
+        "Veracidade",
+        "Volume",
+        "Valor"
+      ],
+      "correct": 3,
+      "explain": "Busca-se comprovar o benefício concreto extraído dos dados.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q031",
+      "topic_priority": "máxima",
+      "explain_short": "Busca-se comprovar o benefício concreto extraído dos dados."
+    },
+    {
+      "module": "Big Data",
+      "q": "Um arquivo mistura XML, planilha e foto. O enunciado destaca variedade porque…",
+      "options": [
+        "os registros são necessariamente grandes",
+        "há diversidade de representações",
+        "o processamento ocorre em microssegundos",
+        "houve validação formal da qualidade"
+      ],
+      "correct": 1,
+      "explain": "XML, planilha e foto têm estruturas e formatos distintos.",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q032",
+      "topic_priority": "máxima",
+      "explain_short": "XML, planilha e foto têm estruturas e formatos distintos."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "“Todos os contratos assinados digitalmente usam certificado. Este contrato foi assinado digitalmente; logo, usa certificado.” O padrão é…",
+      "options": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Crítico"
+      ],
+      "correct": 0,
+      "explain": "Regra geral aplicada ao caso específico: dedução.",
+      "source": "Aula 5 · pp. 3–5 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q033",
+      "topic_priority": "alta",
+      "explain_short": "Regra geral aplicada ao caso específico: dedução."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Depois de dez falhas ocorrerem nas segundas-feiras, um desenvolvedor supõe que toda segunda haverá falha. Isso é…",
+      "options": [
+        "Dedução",
+        "Abdução",
+        "Indução",
+        "Análise"
+      ],
+      "correct": 2,
+      "explain": "Generalização de casos observados: indução; a hipótese não é certeza.",
+      "source": "Aula 5 · pp. 6–8 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q034",
+      "topic_priority": "alta",
+      "explain_short": "Generalização de casos observados: indução; a hipótese não é certeza."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "O servidor parou de responder. O engenheiro suspeita de memória esgotada, sem ainda ter prova. Isso é…",
+      "options": [
+        "Crítica",
+        "Abdução",
+        "Dedução",
+        "Indução"
+      ],
+      "correct": 1,
+      "explain": "Busca uma explicação plausível para observação com informação incompleta.",
+      "source": "Aula 5 · pp. 9–11 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q035",
+      "topic_priority": "alta",
+      "explain_short": "Busca uma explicação plausível para observação com informação incompleta."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Para resolver uma falha, a equipe testa rede, aplicação e banco separadamente. Qual raciocínio é central?",
+      "options": [
+        "Analítico",
+        "Crítico",
+        "Indutivo",
+        "Dedutivo"
+      ],
+      "correct": 0,
+      "explain": "Decompor o problema em partes para compreender o todo é pensamento analítico.",
+      "source": "Aula 5 · pp. 12–14 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q036",
+      "topic_priority": "alta",
+      "explain_short": "Decompor o problema em partes para compreender o todo é pensamento analítico."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Antes de aceitar um relatório, uma gestora questiona fontes, evidências e possíveis vieses. O raciocínio é…",
+      "options": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Crítico"
+      ],
+      "correct": 3,
+      "explain": "O foco está na avaliação cuidadosa da validade, coerência e evidências.",
+      "source": "Aula 5 · pp. 15–17 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q037",
+      "topic_priority": "alta",
+      "explain_short": "O foco está na avaliação cuidadosa da validade, coerência e evidências."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "“Vi três cisnes brancos; portanto todos os cisnes são brancos.” Qual risco existe?",
+      "options": [
+        "Conclusão dedutivamente garantida",
+        "Generalização indevida de amostra limitada",
+        "Ausência completa de observações",
+        "Decomposição de problema"
+      ],
+      "correct": 1,
+      "explain": "Indução gera conclusão provável, sujeita a novas evidências.",
+      "source": "Aula 5 · pp. 6–8 (exemplo didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q038",
+      "topic_priority": "alta",
+      "explain_short": "Indução gera conclusão provável, sujeita a novas evidências."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Rua molhada e nuvens escuras levam à hipótese de chuva. Qual observação torna a hipótese menos segura?",
+      "options": [
+        "Existe um aspersor ligado no local",
+        "Chuva molha ruas",
+        "Há nuvens",
+        "A rua está molhada"
+      ],
+      "correct": 0,
+      "explain": "Abdução admite explicações alternativas; o aspersor poderia explicar a água.",
+      "source": "Aula 5 · pp. 9–11 (exemplo didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q039",
+      "topic_priority": "alta",
+      "explain_short": "Abdução admite explicações alternativas; o aspersor poderia explicar a água."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Qual raciocínio parte de uma regra geral e chega a uma conclusão específica, quando a inferência é adequada?",
+      "options": [
+        "Crítico",
+        "Abdutivo",
+        "Dedutivo",
+        "Indutivo"
+      ],
+      "correct": 2,
+      "explain": "Dedução desce do geral ao caso particular.",
+      "source": "Aula 5 · pp. 3–5",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q040",
+      "topic_priority": "alta",
+      "explain_short": "Dedução desce do geral ao caso particular."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Qual raciocínio procura uma hipótese que explique uma observação?",
+      "options": [
+        "Analítico",
+        "Indutivo",
+        "Dedutivo",
+        "Abdutivo"
+      ],
+      "correct": 3,
+      "explain": "Abdução propõe explicação plausível para um fato.",
+      "source": "Aula 5 · pp. 9–11",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q041",
+      "topic_priority": "alta",
+      "explain_short": "Abdução propõe explicação plausível para um fato."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Qual alternativa contrasta corretamente indução e dedução?",
+      "options": [
+        "Indução generaliza casos; dedução aplica regras gerais",
+        "Ambas garantem certeza total",
+        "Dedução sempre depende de experimentos",
+        "Indução sempre testa uma hipótese causal"
+      ],
+      "correct": 0,
+      "explain": "Aula 5 distingue generalização provável de inferência do geral ao específico.",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q042",
+      "topic_priority": "alta",
+      "explain_short": "Aula 5 distingue generalização provável de inferência do geral ao específico."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "O programador cria três hipóteses para um bug e testa a mais provável. A formulação inicial é mais próxima de…",
+      "options": [
+        "Dedução",
+        "Abdução",
+        "Indução obrigatoriamente",
+        "Repetição mecânica"
+      ],
+      "correct": 1,
+      "explain": "A observação do bug leva à hipótese explicativa plausível.",
+      "source": "Aula 5 · pp. 9–11 (exemplo didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q043",
+      "topic_priority": "alta",
+      "explain_short": "A observação do bug leva à hipótese explicativa plausível."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Uma estudante avalia a qualidade das premissas antes de aceitar uma conclusão. A habilidade em foco é…",
+      "options": [
+        "Velocidade",
+        "Armazenamento",
+        "Raciocínio crítico",
+        "Modelagem de dados"
+      ],
+      "correct": 2,
+      "explain": "Avaliar argumentos e evidências é central ao pensamento crítico.",
+      "source": "Aula 5 · pp. 15–17",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q044",
+      "topic_priority": "alta",
+      "explain_short": "Avaliar argumentos e evidências é central ao pensamento crítico."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Separar um problema grande em subproblemas NÃO corresponde diretamente a…",
+      "options": [
+        "Raciocínio analítico",
+        "Decomposição",
+        "Organização da resolução",
+        "Inferência abdutiva"
+      ],
+      "correct": 3,
+      "explain": "Abdução constrói explicações; decomposição caracteriza o analítico.",
+      "source": "Aula 5 · pp. 9–14",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q045",
+      "topic_priority": "alta",
+      "explain_short": "Abdução constrói explicações; decomposição caracteriza o analítico."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Qual dedução é logicamente sustentada?",
+      "options": [
+        "Todos os programadores usam computador; Ana usa computador; então Ana é programadora",
+        "Todos os cães são mamíferos; Bob é cão; logo Bob é mamífero",
+        "Alguns carros são pretos; logo todos são pretos",
+        "A rua está molhada; logo necessariamente choveu"
+      ],
+      "correct": 1,
+      "explain": "Uma regra universal aplicada a caso pertencente à classe permite conclusão válida.",
+      "source": "Aula 5 · pp. 3–5 (exemplo didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q046",
+      "topic_priority": "alta",
+      "explain_short": "Uma regra universal aplicada a caso pertencente à classe permite conclusão válida."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "“Este remédio funcionou em dois pacientes; então funciona em todas as pessoas.” A falha é de…",
+      "options": [
+        "Dedução válida",
+        "Evidência suficiente",
+        "Amostra insuficiente para generalização",
+        "Decomposição excessiva"
+      ],
+      "correct": 2,
+      "explain": "Uma indução com poucos exemplos não garante uma afirmação universal.",
+      "source": "Aula 5 · pp. 6–8 (exemplo didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q047",
+      "topic_priority": "alta",
+      "explain_short": "Uma indução com poucos exemplos não garante uma afirmação universal."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Qual estratégia combina pensamento analítico e crítico?",
+      "options": [
+        "Aceitar primeiro palpite",
+        "Analisar cada componente e avaliar evidências de cada hipótese",
+        "Repetir informação sem verificar",
+        "Escolher a hipótese mais popular"
+      ],
+      "correct": 1,
+      "explain": "É possível decompor um problema e testar a validade de conclusões sobre suas partes.",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q048",
+      "topic_priority": "alta",
+      "explain_short": "É possível decompor um problema e testar a validade de conclusões sobre suas partes."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Se você identifica cinco erros diferentes e conclui que todos ocorreram por causa da última atualização, isso é…",
+      "options": [
+        "Hipótese explicativa que precisa ser testada",
+        "Dedução necessariamente válida",
+        "Solução comprovada",
+        "Decomposição do sistema"
+      ],
+      "correct": 0,
+      "explain": "Atribuir causa provável a observações é uma hipótese abdutiva, não prova.",
+      "source": "Aula 5 · pp. 9–11 (exemplo didático)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q049",
+      "topic_priority": "alta",
+      "explain_short": "Atribuir causa provável a observações é uma hipótese abdutiva, não prova."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "“Todos os A são B. C é A. Portanto, C é B.” É exemplo de…",
+      "options": [
+        "Generalização estatística",
+        "Hipótese causal",
+        "Silogismo dedutivo",
+        "Decomposição analítica"
+      ],
+      "correct": 2,
+      "explain": "A aula apresenta silogismo com duas premissas e uma conclusão.",
+      "source": "Aula 5 · pp. 3–5",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q050",
+      "topic_priority": "alta",
+      "explain_short": "A aula apresenta silogismo com duas premissas e uma conclusão."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Qual afirmação sobre conclusão indutiva está correta?",
+      "options": [
+        "É sempre matematicamente exata",
+        "É impossível na ciência",
+        "Dispensa observações",
+        "É provável, mas não necessariamente certa"
+      ],
+      "correct": 3,
+      "explain": "O PDF destaca caráter provável das conclusões indutivas.",
+      "source": "Aula 5 · pp. 6–8",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q051",
+      "topic_priority": "alta",
+      "explain_short": "O PDF destaca caráter provável das conclusões indutivas."
+    },
+    {
+      "module": "Raciocínio Lógico",
+      "q": "Um detetive encontra uma janela quebrada e formula explicações possíveis. Qual raciocínio predomina?",
+      "options": [
+        "Indução",
+        "Abdução",
+        "Dedução",
+        "Cálculo algébrico"
+      ],
+      "correct": 1,
+      "explain": "Hipóteses explicam um fato observado, mas não são garantidas.",
+      "source": "Aula 5 · pp. 9–11 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q052",
+      "topic_priority": "alta",
+      "explain_short": "Hipóteses explicam um fato observado, mas não são garantidas."
+    },
+    {
+      "module": "Ciência de Dados",
+      "q": "Uma equipe combina estatística, programação e entendimento do negócio. Isso reproduz qual característica de Data Science?",
+      "options": [
+        "Multidisciplinaridade",
+        "Apenas visualização",
+        "Exclusividade matemática",
+        "Ausência de análise"
+      ],
+      "correct": 0,
+      "explain": "A Aula 1 lista computação, estatística, matemática e conhecimento do negócio.",
+      "source": "Aula 1 · pp. 2–3",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q053",
+      "topic_priority": "média",
+      "explain_short": "A Aula 1 lista computação, estatística, matemática e conhecimento do negócio."
+    },
+    {
+      "module": "Ciência de Dados",
+      "q": "O profissional formula hipótese, seleciona modelos e avalia resultados. Segundo a Aula 1, aproxima-se mais do papel de…",
+      "options": [
+        "Operador de telemarketing",
+        "Designer gráfico",
+        "Cientista de dados",
+        "Analista de suporte"
+      ],
+      "correct": 2,
+      "explain": "O material atribui formulação de problemas e modelos ao cientista de dados.",
+      "source": "Aula 1 · pp. 4–5",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q054",
+      "topic_priority": "média",
+      "explain_short": "O material atribui formulação de problemas e modelos ao cientista de dados."
+    },
+    {
+      "module": "Ciência de Dados",
+      "q": "Um profissional avalia como números afetam desempenho e decisões da empresa. A ênfase é de…",
+      "options": [
+        "Business Analyst",
+        "Engenheiro de redes",
+        "Administrador de banco apenas",
+        "Operador de sistemas"
+      ],
+      "correct": 0,
+      "explain": "O perfil Business Analyst é descrito como análise de dados em relação ao negócio.",
+      "source": "Aula 1 · pp. 5–7",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q055",
+      "topic_priority": "média",
+      "explain_short": "O perfil Business Analyst é descrito como análise de dados em relação ao negócio."
+    },
+    {
+      "module": "Ciência de Dados",
+      "q": "Qual área NÃO está listada entre os pilares multidisciplinares de Data Science na Aula 1?",
+      "options": [
+        "Estatística",
+        "Computação",
+        "Conhecimento do negócio",
+        "Arqueologia"
+      ],
+      "correct": 3,
+      "explain": "O slide lista computação, estatística, matemática e negócio.",
+      "source": "Aula 1 · p. 3",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q056",
+      "topic_priority": "média",
+      "explain_short": "O slide lista computação, estatística, matemática e negócio."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Qual enunciado se aproxima mais da definição didática de Inteligência Artificial nos slides?",
+      "options": [
+        "Sistemas capazes de executar tarefas que lembram aspectos do raciocínio humano",
+        "Qualquer armazenamento em nuvem",
+        "Todo software escrito em Python",
+        "Todo banco de dados relacional"
+      ],
+      "correct": 0,
+      "explain": "O texto relaciona IA à percepção de variáveis, decisões e resolução de problemas.",
+      "source": "Aula 1 · pp. 12–14",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q057",
+      "topic_priority": "média",
+      "explain_short": "O texto relaciona IA à percepção de variáveis, decisões e resolução de problemas."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Um programa executa regras previamente definidas para inferir uma conclusão. Qual abordagem dos slides se aproxima disso?",
+      "options": [
+        "Abordagem simbólica",
+        "Armazenamento mecânico",
+        "Captação de dados",
+        "Sistema operacional"
+      ],
+      "correct": 0,
+      "explain": "A abordagem simbólica é associada a símbolos e regras para representação do conhecimento.",
+      "source": "Aula 1 · pp. 31–33",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q058",
+      "topic_priority": "média",
+      "explain_short": "A abordagem simbólica é associada a símbolos e regras para representação do conhecimento."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Uma rede aprende padrões a partir de exemplos apresentados no treinamento. O conceito está associado a…",
+      "options": [
+        "Rede neural artificial",
+        "Coleta manual de formulários",
+        "Dedução formal obrigatória",
+        "Monitoramento contábil"
+      ],
+      "correct": 0,
+      "explain": "As redes neurais são apresentadas como estruturas que permitem aprender representações a partir de dados.",
+      "source": "Aula 1 · pp. 34–38",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q059",
+      "topic_priority": "média",
+      "explain_short": "As redes neurais são apresentadas como estruturas que permitem aprender representações a partir de dados."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Qual relação entre IA, ML e Deep Learning é ensinada no material?",
+      "options": [
+        "IA é subcampo de Deep Learning",
+        "Deep Learning contém toda a IA",
+        "Machine Learning e Deep Learning não têm relação",
+        "Deep Learning é uma abordagem de ML, que é subárea de IA"
+      ],
+      "correct": 3,
+      "explain": "A hierarquia geral é IA ⊃ ML ⊃ Deep Learning.",
+      "source": "Aula 1 · pp. 56–62",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q060",
+      "topic_priority": "média",
+      "explain_short": "A hierarquia geral é IA ⊃ ML ⊃ Deep Learning."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Um sistema recomenda vídeos com base no histórico e ajusta recomendações após interações. Um conceito aplicável é…",
+      "options": [
+        "Machine Learning",
+        "Somente hardware",
+        "Somente sistema operacional",
+        "Apenas editor de texto"
+      ],
+      "correct": 0,
+      "explain": "A aula menciona recomendação de conteúdo como aplicação de Machine Learning.",
+      "source": "Aula 1 · pp. 59–67",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q061",
+      "topic_priority": "média",
+      "explain_short": "A aula menciona recomendação de conteúdo como aplicação de Machine Learning."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Uma ferramenta automatiza uma tarefa específica, sem inteligência humana geral. Ela se aproxima da ideia de…",
+      "options": [
+        "IA forte em sentido humano",
+        "IA fraca/específica",
+        "Superinteligência confirmada",
+        "Nenhuma forma de IA"
+      ],
+      "correct": 1,
+      "explain": "O contraste entre IA forte e fraca aparece nos slides; aplicações específicas não implicam inteligência geral.",
+      "source": "Aula 1 · pp. 39–44",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q062",
+      "topic_priority": "média",
+      "explain_short": "O contraste entre IA forte e fraca aparece nos slides; aplicações específicas não implicam inteligência geral."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Ter muitos dados significa automaticamente ter Machine Learning funcionando?",
+      "options": [
+        "Sim, dados já são o modelo",
+        "Sim, se estiverem em CSV",
+        "Não: é preciso um método/modelo de aprendizagem e treinamento",
+        "Não: Machine Learning dispensa qualquer dado"
+      ],
+      "correct": 2,
+      "explain": "O slide associa ML a alteração de comportamento por experiência/treino, não à mera posse de dados.",
+      "source": "Aula 1 · pp. 59–67 (explicação didática)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q063",
+      "topic_priority": "média",
+      "explain_short": "O slide associa ML a alteração de comportamento por experiência/treino, não à mera posse de dados."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Que alternativa representa uma aplicação de IA citada na Aula 1?",
+      "options": [
+        "Previsão e reconhecimento de padrões",
+        "Papel sulfite",
+        "Armazenamento em gaveta",
+        "Apenas digitar números"
+      ],
+      "correct": 0,
+      "explain": "Os slides descrevem várias aplicações e capacidades de sistemas inteligentes.",
+      "source": "Aula 1 · pp. 45–55",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q064",
+      "topic_priority": "média",
+      "explain_short": "Os slides descrevem várias aplicações e capacidades de sistemas inteligentes."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Diferencie uma rede neural de um banco SQL tradicional. Qual afirmação é adequada?",
+      "options": [
+        "SQL sempre aprende padrões sozinho",
+        "Rede neural pode aprender parâmetros no treinamento; banco SQL organiza/consulta dados",
+        "Banco SQL é sempre IA forte",
+        "Nenhuma rede neural usa matemática"
+      ],
+      "correct": 1,
+      "explain": "Redes neurais e sistemas tradicionais de dados cumprem funções diferentes.",
+      "source": "Aula 1 · pp. 34–38 (comparação didática)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q065",
+      "topic_priority": "média",
+      "explain_short": "Redes neurais e sistemas tradicionais de dados cumprem funções diferentes."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "A IA conexionista é mais diretamente associada no material a…",
+      "options": [
+        "Tabelas contábeis",
+        "Regras escritas em linguagem natural",
+        "Redes neurais e conexões entre unidades",
+        "Cabos de rede físicos"
+      ],
+      "correct": 2,
+      "explain": "O material distingue simbolismo de modelos conexionistas.",
+      "source": "Aula 1 · pp. 31–38",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q066",
+      "topic_priority": "média",
+      "explain_short": "O material distingue simbolismo de modelos conexionistas."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Qual interpretação sobre “IA forte” exige cautela?",
+      "options": [
+        "É conceito tratado nos slides",
+        "Pode ser usada em contraste com IA fraca",
+        "Os exemplos de IA atual não demonstram necessariamente inteligência geral",
+        "Qualquer chatbot prova a existência de IA forte"
+      ],
+      "correct": 3,
+      "explain": "Aplicação de IA não demonstra por si só inteligência geral; a categoria forte tem interpretação própria.",
+      "source": "Aula 1 · pp. 39–44 (nota conceitual)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q067",
+      "topic_priority": "média",
+      "explain_short": "Aplicação de IA não demonstra por si só inteligência geral; a categoria forte tem interpretação própria."
+    },
+    {
+      "module": "Inteligência Artificial",
+      "q": "Uma plataforma aprende a identificar fraudes a partir de histórico de transações. O caso ilustra…",
+      "options": [
+        "Um processo de Machine Learning",
+        "Um tipo obrigatório de Power BI",
+        "Um raciocínio dedutivo puro sem treinamento",
+        "Um dado não estruturado necessariamente"
+      ],
+      "correct": 0,
+      "explain": "Aprender padrões com exemplos é um cenário típico de ML citado na aula.",
+      "source": "Aula 1 · pp. 59–67 (exemplo didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q068",
+      "topic_priority": "média",
+      "explain_short": "Aprender padrões com exemplos é um cenário típico de ML citado na aula."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "Um painel organiza dados de vendas e ajuda o gestor a decidir onde investir. O processo exemplifica…",
+      "options": [
+        "IA forte",
+        "Business Intelligence",
+        "Apenas tráfego de rede",
+        "Somente UX"
+      ],
+      "correct": 1,
+      "explain": "BI organiza e interpreta dados para auxiliar decisões de negócio.",
+      "source": "Aula 1 · pp. 68–72 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q069",
+      "topic_priority": "média",
+      "explain_short": "BI organiza e interpreta dados para auxiliar decisões de negócio."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "Qual das alternativas distingue BI de Power BI?",
+      "options": [
+        "BI é conceito/processo; Power BI é uma ferramenta possível",
+        "São exatamente a mesma coisa",
+        "Power BI é toda ciência de dados",
+        "BI dispensa dados"
+      ],
+      "correct": 0,
+      "explain": "O estudo de BI não depende de dominar uma ferramenta específica.",
+      "source": "Aula 1 · pp. 68–85 (explicação didática)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q070",
+      "topic_priority": "média",
+      "explain_short": "O estudo de BI não depende de dominar uma ferramenta específica."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "Em BI, a equipe define uma meta estratégica antes de escolher indicadores. Qual pilar predomina?",
+      "options": [
+        "Operacional",
+        "Analítico",
+        "Estratégico",
+        "Infraestrutura"
+      ],
+      "correct": 2,
+      "explain": "O pilar estratégico é responsável por direção, metas e planejamento.",
+      "source": "Aula 1 · pp. 73–76",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q071",
+      "topic_priority": "média",
+      "explain_short": "O pilar estratégico é responsável por direção, metas e planejamento."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "Uma equipe investiga quais produtos mais sofreram devoluções. O pilar mais relacionado é…",
+      "options": [
+        "Operacional",
+        "Analítico",
+        "Estratégico",
+        "Jurídico"
+      ],
+      "correct": 1,
+      "explain": "O foco é interpretar dados para compreender a situação.",
+      "source": "Aula 1 · pp. 73–76 (exemplo didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q072",
+      "topic_priority": "média",
+      "explain_short": "O foco é interpretar dados para compreender a situação."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "Após analisar os resultados, a empresa muda sua rotina de reposição. Qual pilar está em ação?",
+      "options": [
+        "Estratégico",
+        "Analítico",
+        "Operacional",
+        "Estatístico"
+      ],
+      "correct": 2,
+      "explain": "A implementação operacional aplica decisões e estratégias.",
+      "source": "Aula 1 · pp. 73–76 (exemplo didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q073",
+      "topic_priority": "média",
+      "explain_short": "A implementação operacional aplica decisões e estratégias."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "Após aplicar um plano de BI, a empresa mede se a conversão melhorou. Essa etapa corresponde a…",
+      "options": [
+        "Acompanhamento de performance",
+        "Descarte de informações",
+        "Coleta inicial exclusivamente",
+        "Apenas hardware"
+      ],
+      "correct": 0,
+      "explain": "O acompanhamento verifica os efeitos das ações executadas.",
+      "source": "Aula 1 · pp. 77–85",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q074",
+      "topic_priority": "média",
+      "explain_short": "O acompanhamento verifica os efeitos das ações executadas."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "Qual sequência melhor resume o fluxo apresentado no material?",
+      "options": [
+        "Agir sem informação → coletar → esquecer",
+        "Coletar → analisar → gerar insights/estratégias → acompanhar",
+        "Acompanhar → apagar → construir telas",
+        "Treinar IA → excluir clientes → encerrar"
+      ],
+      "correct": 1,
+      "explain": "O slide organiza o ciclo desde coleta e análise até resultados e monitoramento.",
+      "source": "Aula 1 · pp. 77–85",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q075",
+      "topic_priority": "média",
+      "explain_short": "O slide organiza o ciclo desde coleta e análise até resultados e monitoramento."
+    },
+    {
+      "module": "Business Intelligence",
+      "q": "BI substitui inteiramente a responsabilidade humana por decisões empresariais?",
+      "options": [
+        "Sim, sempre",
+        "Sim, quando houver dashboards",
+        "Não, fornece informação para apoiar a tomada de decisão",
+        "Sim, quando há muitos gráficos"
+      ],
+      "correct": 2,
+      "explain": "Os slides enfatizam apoio e inteligência para escolhas, não decisão automática universal.",
+      "source": "Aula 1 · pp. 68–72",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q076",
+      "topic_priority": "média",
+      "explain_short": "Os slides enfatizam apoio e inteligência para escolhas, não decisão automática universal."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Um site registra origem das visitas para avaliar uma campanha. Qual atividade começa esse processo?",
+      "options": [
+        "Coleta de dados",
+        "Tomada de decisão sem evidência",
+        "Treino de hardware",
+        "Dedução obrigatória"
+      ],
+      "correct": 0,
+      "explain": "Capturar interações e eventos é parte da coleta.",
+      "source": "Aula 2 · pp. 2–17 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q077",
+      "topic_priority": "média",
+      "explain_short": "Capturar interações e eventos é parte da coleta."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Uma empresa decide coletar todos os dados possíveis sem objetivo claro. Que orientação da Aula 2 ela ignora?",
+      "options": [
+        "Uso de fonte confiável apenas",
+        "Definição de objetivos e planejamento",
+        "Compra de sensores obrigatória",
+        "Publicidade tradicional"
+      ],
+      "correct": 1,
+      "explain": "Os slides orientam estabelecer objetivos e planejar a coleta.",
+      "source": "Aula 2 · pp. 29–39",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q078",
+      "topic_priority": "média",
+      "explain_short": "Os slides orientam estabelecer objetivos e planejar a coleta."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Qual indicador citado no material é útil para acompanhar o desempenho comercial?",
+      "options": [
+        "Número de janelas abertas",
+        "Cor do menu",
+        "Ticket médio",
+        "Tipo de cabo"
+      ],
+      "correct": 2,
+      "explain": "Ticket médio aparece como exemplo de KPI na Aula 2.",
+      "source": "Aula 2 · pp. 18–22",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q079",
+      "topic_priority": "média",
+      "explain_short": "Ticket médio aparece como exemplo de KPI na Aula 2."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Uma loja pesquisa a satisfação de quem acabou de comprar. Qual meio de coleta é mais direto?",
+      "options": [
+        "Formulário de feedback",
+        "Compilador de código",
+        "Monitoramento de voltagem",
+        "Editor de planilhas vazio"
+      ],
+      "correct": 0,
+      "explain": "Formulários são apresentados como instrumentos úteis para respostas de consumidores.",
+      "source": "Aula 2 · pp. 40–45 (exemplo didático)",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q080",
+      "topic_priority": "média",
+      "explain_short": "Formulários são apresentados como instrumentos úteis para respostas de consumidores."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Por que dados de clique isolados podem não ser suficientes para concluir que clientes estão satisfeitos?",
+      "options": [
+        "Porque cliques são sempre falsos",
+        "Porque análise exige contexto e indicadores apropriados",
+        "Porque satisfação é igual a velocidade",
+        "Porque todo clique já é venda"
+      ],
+      "correct": 1,
+      "explain": "Dados precisam ser interpretados de acordo com objetivos e demais evidências.",
+      "source": "Aula 2 · pp. 20–39 (explicação didática)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q081",
+      "topic_priority": "média",
+      "explain_short": "Dados precisam ser interpretados de acordo com objetivos e demais evidências."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Um sistema registra abandonos no checkout e a equipe mede o efeito de uma alteração no fluxo. Isso ilustra…",
+      "options": [
+        "Processo cíclico de coleta, análise e melhoria",
+        "Somente captura sem consequência",
+        "IA forte necessariamente",
+        "Ausência de indicadores"
+      ],
+      "correct": 0,
+      "explain": "A coleta alimenta a análise e pode orientar ajustes de estratégia.",
+      "source": "Aula 2 · pp. 2–39 (exemplo didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q082",
+      "topic_priority": "média",
+      "explain_short": "A coleta alimenta a análise e pode orientar ajustes de estratégia."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Qual ferramenta citada nos slides está associada a mensuração de tráfego e comportamento digital?",
+      "options": [
+        "Google Analytics",
+        "Editor de áudio",
+        "IDE de programação",
+        "Cliente FTP"
+      ],
+      "correct": 0,
+      "explain": "A Aula 2 inclui Google Analytics como ferramenta relacionada à coleta digital.",
+      "source": "Aula 2 · pp. 40–45",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q083",
+      "topic_priority": "média",
+      "explain_short": "A Aula 2 inclui Google Analytics como ferramenta relacionada à coleta digital."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Uma campanha atraiu muitas visitas, mas gerou poucas compras. O próximo passo coerente é…",
+      "options": [
+        "Desprezar as métricas",
+        "Analisar conversão e possíveis gargalos",
+        "Aumentar todo orçamento sem análise",
+        "Eliminar toda coleta"
+      ],
+      "correct": 1,
+      "explain": "Coletar dados só é útil quando eles são analisados para orientar decisões.",
+      "source": "Aula 2 · pp. 20–39 (exemplo didático)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q084",
+      "topic_priority": "média",
+      "explain_short": "Coletar dados só é útil quando eles são analisados para orientar decisões."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Qual alternativa melhor distingue métrica de KPI?",
+      "options": [
+        "Toda métrica tem relevância estratégica",
+        "KPI é métrica selecionada por sua relação com um objetivo relevante",
+        "KPI nunca pode ser numérico",
+        "Métrica não mede nada"
+      ],
+      "correct": 1,
+      "explain": "KPIs são indicadores-chave associados a metas; nem toda métrica tem esse papel.",
+      "source": "Aula 2 · pp. 18–22 (explicação didática)",
+      "difficulty": 3,
+      "kind": "aplicação didática",
+      "id": "v2q085",
+      "topic_priority": "média",
+      "explain_short": "KPIs são indicadores-chave associados a metas; nem toda métrica tem esse papel."
+    },
+    {
+      "module": "Coleta de Dados",
+      "q": "Uma empresa quer saber por que clientes cancelam o serviço. Qual primeira decisão é mais adequada?",
+      "options": [
+        "Definir a questão e fontes de dados relevantes",
+        "Adquirir hardware ao acaso",
+        "Excluir entrevistas",
+        "Assumir que todos cancelam pelo preço"
+      ],
+      "correct": 0,
+      "explain": "Planejamento da coleta começa por objetivos e perguntas a responder.",
+      "source": "Aula 2 · pp. 29–39",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q086",
+      "topic_priority": "média",
+      "explain_short": "Planejamento da coleta começa por objetivos e perguntas a responder."
+    },
+    {
+      "module": "Ética e Confiança",
+      "q": "O que caracteriza melhor ética de dados na Aula 3?",
+      "options": [
+        "Só impedir acesso por senha",
+        "Considerar implicações morais em toda a cadeia de uso de dados",
+        "Apenas armazenar dados mais rápido",
+        "Abrir todos os dados sem restrições"
+      ],
+      "correct": 1,
+      "explain": "A ética aborda impactos e responsabilidades em todas as etapas, além da privacidade.",
+      "source": "Aula 3 · pp. 6–9",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q087",
+      "topic_priority": "baixa",
+      "explain_short": "A ética aborda impactos e responsabilidades em todas as etapas, além da privacidade."
+    },
+    {
+      "module": "Ética e Confiança",
+      "q": "Coletar dados apenas porque é tecnicamente possível é necessariamente ético?",
+      "options": [
+        "Sim, tecnologia autoriza uso",
+        "Sim, se o arquivo for grande",
+        "Não: impactos, finalidade e responsabilidades precisam ser considerados",
+        "Sim, se o modelo usa IA"
+      ],
+      "correct": 2,
+      "explain": "Possibilidade técnica não substitui reflexão ética e obrigações legais.",
+      "source": "Aula 3 · pp. 6–16 (explicação didática)",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q088",
+      "topic_priority": "baixa",
+      "explain_short": "Possibilidade técnica não substitui reflexão ética e obrigações legais."
+    },
+    {
+      "module": "Ética e Confiança",
+      "q": "Um modelo favorece injustamente um grupo por padrão enviesado. O problema está ligado a…",
+      "options": [
+        "Discriminação algorítmica",
+        "Velocidade de rede",
+        "Variedade de arquivos",
+        "Tamanho do banco"
+      ],
+      "correct": 0,
+      "explain": "A parte final da Aula 3 discute danos e riscos no uso de dados e algoritmos.",
+      "source": "Aula 3 · pp. 26–31",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q089",
+      "topic_priority": "baixa",
+      "explain_short": "A parte final da Aula 3 discute danos e riscos no uso de dados e algoritmos."
+    },
+    {
+      "module": "Ética e Confiança",
+      "q": "Uma organização divulga registros pessoais sem precauções adequadas. O risco se relaciona a…",
+      "options": [
+        "Apenas visualização",
+        "Um aumento automático de valor",
+        "Privacidade e segurança dos dados",
+        "Um tipo de dedução"
+      ],
+      "correct": 2,
+      "explain": "Proteção e uso responsável de informações são temas da Aula 3.",
+      "source": "Aula 3 · pp. 2–31",
+      "difficulty": 1,
+      "kind": "aplicação didática",
+      "id": "v2q090",
+      "topic_priority": "baixa",
+      "explain_short": "Proteção e uso responsável de informações são temas da Aula 3."
+    },
+    {
+      "module": "Ética e Confiança",
+      "q": "A ética de dados, nos slides, limita-se à privacidade?",
+      "options": [
+        "Sim, apenas esconder informações",
+        "Sim, apenas LGPD",
+        "Sim, apenas marketing",
+        "Não, inclui impactos de coleta, uso, análise e compartilhamento"
+      ],
+      "correct": 3,
+      "explain": "O slide 6 destaca que ética de dados abrange mais que privacidade.",
+      "source": "Aula 3 · pp. 6–9",
+      "difficulty": 2,
+      "kind": "aplicação didática",
+      "id": "v2q091",
+      "topic_priority": "baixa",
+      "explain_short": "O slide 6 destaca que ética de dados abrange mais que privacidade."
+    }
+  ],
+  "cards": [
+    {
+      "id": "fl01",
+      "module": "Big Data",
+      "front": "O que é Big Data? — conceito central?",
+      "back": "Os slides descrevem Big Data como grandes conjuntos de dados, muito grandes ou complexos para processamento tradicional.",
+      "source": "Aula 1 · p. 8–11"
+    },
+    {
+      "id": "fl02",
+      "module": "Big Data",
+      "front": "V1 · Volume — conceito central?",
+      "back": "Volume é a quantidade total de dados produzidos, acumulados ou processados. (Explicação complementar para o V citado no slide.)",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "fl03",
+      "module": "Big Data",
+      "front": "V2 · Velocidade — conceito central?",
+      "back": "Velocidade é o ritmo de geração, chegada, transmissão ou processamento de dados. (Complemento didático.)",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "fl04",
+      "module": "Big Data",
+      "front": "V3 · Variedade — conceito central?",
+      "back": "Variedade diz respeito à diversidade de tipos, fontes e formatos de dados. (Complemento didático.)",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "fl05",
+      "module": "Big Data",
+      "front": "V4 · Veracidade — conceito central?",
+      "back": "Veracidade é o grau de confiança, qualidade e precisão dos dados. (Complemento didático.)",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "fl06",
+      "module": "Big Data",
+      "front": "V5 · Valor — conceito central?",
+      "back": "Valor é a utilidade obtida quando os dados contribuem para resultados ou decisões. (Complemento didático.)",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "fl07",
+      "module": "Big Data",
+      "front": "Os Vs atuam juntos — conceito central?",
+      "back": "Os cinco Vs listados pelo material são Velocidade, Volume, Variedade, Veracidade e Valor.",
+      "source": "Aula 1 · p. 9–11"
+    },
+    {
+      "id": "fl08",
+      "module": "Ciência de Dados",
+      "front": "O que é Data Science? — conceito central?",
+      "back": "O material trata Data Science como estudo disciplinado dos dados, sua captura, transformação, geração e análise.",
+      "source": "Aula 1 · p. 2–3"
+    },
+    {
+      "id": "fl09",
+      "module": "Ciência de Dados",
+      "front": "Perfis profissionais de dados — conceito central?",
+      "back": "Os slides diferenciam Data Scientist, Business Analyst e Data Analyst pelas contribuições ao problema e ao negócio.",
+      "source": "Aula 1 · p. 4–7"
+    },
+    {
+      "id": "fl10",
+      "module": "Inteligência Artificial",
+      "front": "Conceito e objetivo da IA — conceito central?",
+      "back": "Segundo o PDF, IA busca permitir que dispositivos realizem tarefas que lembram percepção, decisão e resolução de problemas humanos.",
+      "source": "Aula 1 · p. 12–26"
+    },
+    {
+      "id": "fl11",
+      "module": "Inteligência Artificial",
+      "front": "Algoritmo, software e hardware — conceito central?",
+      "back": "O material distingue hardware (parte física) e software (programas/instruções) e destaca o papel de algoritmos.",
+      "source": "Aula 1 · p. 16–22"
+    },
+    {
+      "id": "fl12",
+      "module": "Inteligência Artificial",
+      "front": "IA simbólica e conexionista — conceito central?",
+      "back": "O PDF contrapõe IA simbólica (manipulação de símbolos) e conexionista (inspirada em neurônios).",
+      "source": "Aula 1 · p. 31–33"
+    },
+    {
+      "id": "fl13",
+      "module": "Inteligência Artificial",
+      "front": "Redes neurais artificiais — conceito central?",
+      "back": "Redes neurais são modelos com unidades de processamento conectadas, chamadas neurônios artificiais ou nós.",
+      "source": "Aula 1 · p. 34–38"
+    },
+    {
+      "id": "fl14",
+      "module": "Inteligência Artificial",
+      "front": "IA forte e IA fraca nos slides — conceito central?",
+      "back": "A aula apresenta IA forte como categoria associada à autoconsciência e IA fraca como sistemas de tarefas mais específicas.",
+      "source": "Aula 1 · p. 39–44"
+    },
+    {
+      "id": "fl15",
+      "module": "Inteligência Artificial",
+      "front": "Aplicações reais de IA — conceito central?",
+      "back": "O material lista aplicações em indústria, GPS, carros autônomos, chatbots, varejo, jornalismo, bancos, saúde, redes sociais e manutenção.",
+      "source": "Aula 1 · p. 45–55"
+    },
+    {
+      "id": "fl16",
+      "module": "Inteligência Artificial",
+      "front": "IA, Machine Learning e Deep Learning — conceito central?",
+      "back": "O material afirma que Machine Learning faz parte da IA e Deep Learning é uma abordagem de ML com múltiplas camadas neurais.",
+      "source": "Aula 1 · p. 56–62"
+    },
+    {
+      "id": "fl17",
+      "module": "Inteligência Artificial",
+      "front": "Machine Learning na prática — conceito central?",
+      "back": "Machine Learning é descrito como um sistema que muda seu comportamento com base em sua experiência/treinamento.",
+      "source": "Aula 1 · p. 59–67"
+    },
+    {
+      "id": "fl18",
+      "module": "Business Intelligence",
+      "front": "O que é Business Intelligence? — conceito central?",
+      "back": "BI é o processo de coleta, análise e conversão de dados em informações de alto valor para planejamento e operações.",
+      "source": "Aula 1 · p. 68–72"
+    },
+    {
+      "id": "fl19",
+      "module": "Business Intelligence",
+      "front": "Três pilares de BI — conceito central?",
+      "back": "Os slides listam três pilares: estratégico, analítico e operacional.",
+      "source": "Aula 1 · p. 73–76"
+    },
+    {
+      "id": "fl20",
+      "module": "Business Intelligence",
+      "front": "As quatro etapas do BI — conceito central?",
+      "back": "O material organiza o BI em coleta, análise/organização, geração de insights/estratégias e acompanhamento de performance.",
+      "source": "Aula 1 · p. 77–85"
+    },
+    {
+      "id": "fl21",
+      "module": "Coleta de Dados",
+      "front": "O que é coleta de dados? — conceito central?",
+      "back": "A aula descreve coleta como captação de conteúdo estratégico de ferramentas, sites, formulários e interações.",
+      "source": "Aula 2 · p. 2–17"
+    },
+    {
+      "id": "fl22",
+      "module": "Coleta de Dados",
+      "front": "KPIs e indicadores estratégicos — conceito central?",
+      "back": "KPIs são indicadores estratégicos usados para acompanhar métricas essenciais de objetivos definidos.",
+      "source": "Aula 2 · p. 18–22"
+    },
+    {
+      "id": "fl23",
+      "module": "Coleta de Dados",
+      "front": "Objetivos e planejamento de coleta — conceito central?",
+      "back": "Os slides recomendam definir objetivos, planejar a recorrência da coleta e analisar o que foi obtido.",
+      "source": "Aula 2 · p. 29–39"
+    },
+    {
+      "id": "fl24",
+      "module": "Coleta de Dados",
+      "front": "Relacionamento e campanhas — conceito central?",
+      "back": "Interações e respostas do público alimentam decisões sobre relacionamento com clientes e campanhas.",
+      "source": "Aula 2 · p. 20–28"
+    },
+    {
+      "id": "fl25",
+      "module": "Coleta de Dados",
+      "front": "Ferramentas de coleta — conceito central?",
+      "back": "O PDF cita formulários, Google Analytics, UpMiner e Ion como ferramentas/abordagens de coleta.",
+      "source": "Aula 2 · p. 40–45"
+    },
+    {
+      "id": "fl26",
+      "module": "Raciocínio Lógico",
+      "front": "Raciocínio dedutivo — conceito central?",
+      "back": "Vai de premissas gerais para conclusão específica; o slide apresenta silogismo de duas premissas e uma conclusão.",
+      "source": "Aula 5 — Bailly · p. 3–5"
+    },
+    {
+      "id": "fl27",
+      "module": "Raciocínio Lógico",
+      "front": "Raciocínio indutivo — conceito central?",
+      "back": "Parte de observações específicas para formular uma conclusão geral provável, não garantida.",
+      "source": "Aula 5 — Bailly · p. 6–8"
+    },
+    {
+      "id": "fl28",
+      "module": "Raciocínio Lógico",
+      "front": "Raciocínio abdutivo — conceito central?",
+      "back": "Parte de um fato observado e propõe uma hipótese plausível que o explique.",
+      "source": "Aula 5 — Bailly · p. 9–11"
+    },
+    {
+      "id": "fl29",
+      "module": "Raciocínio Lógico",
+      "front": "Raciocínio analítico — conceito central?",
+      "back": "Decompõe problemas complexos em partes menores para analisar e resolver o todo.",
+      "source": "Aula 5 — Bailly · p. 12–14"
+    },
+    {
+      "id": "fl30",
+      "module": "Raciocínio Lógico",
+      "front": "Raciocínio crítico — conceito central?",
+      "back": "Analisa reflexivamente argumentos, informações e evidências para julgar coerência, validade e limitações.",
+      "source": "Aula 5 — Bailly · p. 15–17"
+    },
+    {
+      "id": "fl31",
+      "module": "Raciocínio Lógico",
+      "front": "Comparando os cinco raciocínios — conceito central?",
+      "back": "A aula apresenta cinco tipos: dedutivo, indutivo, abdutivo, analítico e crítico.",
+      "source": "Aula 5 — Bailly · p. 3–17"
+    },
+    {
+      "id": "fl32",
+      "module": "Ética e Confiança",
+      "front": "Ética dos dados — conceito central?",
+      "back": "Ética de dados considera consequências morais da coleta, processamento, armazenamento, compartilhamento e uso de dados.",
+      "source": "Aula 3 · p. 2–16"
+    },
+    {
+      "id": "fl33",
+      "module": "Ética e Confiança",
+      "front": "Consentimento e responsabilidade — conceito central?",
+      "back": "A aula destaca informar adequadamente usuários e agir de forma responsável no tratamento de dados.",
+      "source": "Aula 3 · p. 21–25"
+    },
+    {
+      "id": "fl34",
+      "module": "Ética e Confiança",
+      "front": "Discriminação e vazamento de dados — conceito central?",
+      "back": "Os slides abordam discriminação algorítmica e vazamentos como riscos da coleta e tratamento de dados.",
+      "source": "Aula 3 · p. 26–31"
+    },
+    {
+      "id": "f035",
+      "module": "Big Data",
+      "front": "Qual V mede quantidade de dados?",
+      "back": "Volume",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f036",
+      "module": "Big Data",
+      "front": "Qual V trata rapidez de chegada/processamento?",
+      "back": "Velocidade",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f037",
+      "module": "Big Data",
+      "front": "Qual V trata diferentes formatos?",
+      "back": "Variedade",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f038",
+      "module": "Big Data",
+      "front": "Qual V trata precisão e confiabilidade?",
+      "back": "Veracidade",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f039",
+      "module": "Big Data",
+      "front": "Qual V trata benefícios extraídos?",
+      "back": "Valor",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f040",
+      "module": "Big Data",
+      "front": "Os slides ensinam explicitamente quantos Vs?",
+      "back": "Cinco: Volume, Velocidade, Variedade, Veracidade e Valor.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f041",
+      "module": "Big Data",
+      "front": "Milhões de eventos por segundo: qual V?",
+      "back": "Velocidade",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f042",
+      "module": "Big Data",
+      "front": "Bilhões de registros guardados: qual V?",
+      "back": "Volume",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f043",
+      "module": "Big Data",
+      "front": "Texto, imagem e áudio: qual V?",
+      "back": "Variedade",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f044",
+      "module": "Big Data",
+      "front": "Dados com erros e duplicações: qual V?",
+      "back": "Veracidade",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f045",
+      "module": "Big Data",
+      "front": "Melhorar decisões com dados: qual V?",
+      "back": "Valor",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f046",
+      "module": "Big Data",
+      "front": "Big Data é apenas um banco gigante?",
+      "back": "Não: grande escala ou complexidade desafia ferramentas tradicionais.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f047",
+      "module": "Raciocínio Lógico",
+      "front": "Dedução: direção do raciocínio?",
+      "back": "Do geral para o particular.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f048",
+      "module": "Raciocínio Lógico",
+      "front": "Indução: direção do raciocínio?",
+      "back": "De casos particulares para generalização provável.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f049",
+      "module": "Raciocínio Lógico",
+      "front": "Abdução: qual resultado produz?",
+      "back": "Hipótese plausível para explicar um fato.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f050",
+      "module": "Raciocínio Lógico",
+      "front": "Analítico: operação essencial?",
+      "back": "Decompor o problema em partes menores.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f051",
+      "module": "Raciocínio Lógico",
+      "front": "Crítico: qual objetivo?",
+      "back": "Avaliar argumentos, evidências, validade e limites.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f052",
+      "module": "Raciocínio Lógico",
+      "front": "Silogismo da aula tem qual estrutura?",
+      "back": "Duas premissas e uma conclusão.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f053",
+      "module": "Ciência de Dados",
+      "front": "Quais quatro áreas integram Data Science?",
+      "back": "Computação, Estatística, Matemática e Negócio.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f054",
+      "module": "Ciência de Dados",
+      "front": "Quem analisa dados em relação ao negócio?",
+      "back": "Business Analyst.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f055",
+      "module": "Ciência de Dados",
+      "front": "Quem formula problemas/hipóteses nos slides?",
+      "back": "Data Scientist.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f056",
+      "module": "Inteligência Artificial",
+      "front": "IA simbólica se baseia em quê?",
+      "back": "Manipulação de símbolos e regras.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f057",
+      "module": "Inteligência Artificial",
+      "front": "IA conexionista se inspira em quê?",
+      "back": "Conexões entre neurônios.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f058",
+      "module": "Inteligência Artificial",
+      "front": "O que se ajusta no treino de redes neurais?",
+      "back": "Pesos das conexões.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f059",
+      "module": "Inteligência Artificial",
+      "front": "Qual é a relação IA, ML e DL?",
+      "back": "IA inclui ML; ML inclui Deep Learning.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f060",
+      "module": "Inteligência Artificial",
+      "front": "Qual aplicação antecipa falhas em máquinas?",
+      "back": "Manutenção preditiva.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f061",
+      "module": "Inteligência Artificial",
+      "front": "ML muda comportamento com base em quê?",
+      "back": "Experiência/treinamento a partir de dados.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f062",
+      "module": "Business Intelligence",
+      "front": "Quais são os três pilares do BI?",
+      "back": "Estratégico, analítico e operacional.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f063",
+      "module": "Business Intelligence",
+      "front": "Quais são as quatro etapas de BI?",
+      "back": "Coleta, análise, insights/estratégias e acompanhamento.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f064",
+      "module": "Business Intelligence",
+      "front": "BI entrega respostas definitivas sim/não?",
+      "back": "Não. Fornece informações para orientar decisões.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f065",
+      "module": "Coleta de Dados",
+      "front": "O que é KPI?",
+      "back": "Indicador estratégico usado para monitorar objetivos.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f066",
+      "module": "Coleta de Dados",
+      "front": "Que ferramenta capta respostas de satisfação?",
+      "back": "Formulário.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f067",
+      "module": "Coleta de Dados",
+      "front": "Que ferramenta do slide monitora métricas digitais?",
+      "back": "Google Analytics.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f068",
+      "module": "Coleta de Dados",
+      "front": "Por que analisar dados coletados?",
+      "back": "Para convertê-los em informação útil.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f069",
+      "module": "Ética e Confiança",
+      "front": "Ética de dados vai além de privacidade?",
+      "back": "Sim; considera impactos do ciclo inteiro.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "f070",
+      "module": "Ética e Confiança",
+      "front": "Que risco de IA é tratado na Aula 3?",
+      "back": "Discriminação algorítmica.",
+      "source": "Resumo da aula"
+    },
+    {
+      "id": "v2fc-l01",
+      "module": "Big Data",
+      "front": "Qual a pegadinha em “O que é Big Data?”?",
+      "back": "Big Data não é só número grande de linhas nem sinônimo de IA.",
+      "source": "Aula 1 · p. 8–11"
+    },
+    {
+      "id": "v2fm-l01",
+      "module": "Big Data",
+      "front": "Como lembrar “O que é Big Data?”?",
+      "back": "Big Data = dados difíceis de tratar com métodos tradicionais.",
+      "source": "Aula 1 · p. 8–11"
+    },
+    {
+      "id": "v2fc-l02",
+      "module": "Big Data",
+      "front": "Qual a pegadinha em “V1 · Volume”?",
+      "back": "Não confunda quantidade acumulada com taxa de chegada dos dados.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fm-l02",
+      "module": "Big Data",
+      "front": "Como lembrar “V1 · Volume”?",
+      "back": "Volume = montanha de dados.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fc-l03",
+      "module": "Big Data",
+      "front": "Qual a pegadinha em “V2 · Velocidade”?",
+      "back": "“Milhões por segundo” sugere velocidade; “milhões armazenados” sugere volume.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fm-l03",
+      "module": "Big Data",
+      "front": "Como lembrar “V2 · Velocidade”?",
+      "back": "Velocidade = relógio correndo.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fc-l04",
+      "module": "Big Data",
+      "front": "Qual a pegadinha em “V3 · Variedade”?",
+      "back": "Não é a quantidade das fontes, mas a diversidade dos dados.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fm-l04",
+      "module": "Big Data",
+      "front": "Como lembrar “V3 · Variedade”?",
+      "back": "Variedade = salada de formatos.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fc-l05",
+      "module": "Big Data",
+      "front": "Qual a pegadinha em “V4 · Veracidade”?",
+      "back": "Muitos dados não garantem que eles sejam verdadeiros.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fm-l05",
+      "module": "Big Data",
+      "front": "Como lembrar “V4 · Veracidade”?",
+      "back": "Veracidade = verdade/qualidade.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fc-l06",
+      "module": "Big Data",
+      "front": "Qual a pegadinha em “V5 · Valor”?",
+      "back": "Dados armazenados não são automaticamente conhecimento acionável.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fm-l06",
+      "module": "Big Data",
+      "front": "Como lembrar “V5 · Valor”?",
+      "back": "Valor = resultado útil.",
+      "source": "Aula 1 · p. 9"
+    },
+    {
+      "id": "v2fc-l07",
+      "module": "Big Data",
+      "front": "Qual a pegadinha em “Os Vs atuam juntos”?",
+      "back": "Não há sexto V definido nos quatro PDFs: outras classificações são externas ao material.",
+      "source": "Aula 1 · p. 9–11"
+    },
+    {
+      "id": "v2fm-l07",
+      "module": "Big Data",
+      "front": "Como lembrar “Os Vs atuam juntos”?",
+      "back": "Muitos + Rápidos + Diferentes + Confiáveis + Úteis.",
+      "source": "Aula 1 · p. 9–11"
+    },
+    {
+      "id": "v2fc-l08",
+      "module": "Ciência de Dados",
+      "front": "Qual a pegadinha em “O que é Data Science?”?",
+      "back": "Data Science não equivale a apenas usar uma ferramenta de gráficos.",
+      "source": "Aula 1 · p. 2–3"
+    },
+    {
+      "id": "v2fm-l08",
+      "module": "Ciência de Dados",
+      "front": "Como lembrar “O que é Data Science?”?",
+      "back": "Ciência de dados = código + matemática + estatística + negócio.",
+      "source": "Aula 1 · p. 2–3"
+    },
+    {
+      "id": "v2fc-l09",
+      "module": "Ciência de Dados",
+      "front": "Qual a pegadinha em “Perfis profissionais de dados”?",
+      "back": "As funções se sobrepõem na prática; a divisão aqui segue a simplificação dos slides.",
+      "source": "Aula 1 · p. 4–7"
+    },
+    {
+      "id": "v2fm-l09",
+      "module": "Ciência de Dados",
+      "front": "Como lembrar “Perfis profissionais de dados”?",
+      "back": "Scientist = hipótese; Business = negócio; Analyst = dados/problema.",
+      "source": "Aula 1 · p. 4–7"
+    },
+    {
+      "id": "v2fc-l10",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “Conceito e objetivo da IA”?",
+      "back": "Não confunda IA com robôs humanoides ou consciência.",
+      "source": "Aula 1 · p. 12–26"
+    },
+    {
+      "id": "v2fm-l10",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “Conceito e objetivo da IA”?",
+      "back": "IA = perceber → decidir → resolver.",
+      "source": "Aula 1 · p. 12–26"
+    },
+    {
+      "id": "v2fc-l11",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “Algoritmo, software e hardware”?",
+      "back": "Nem todo algoritmo representa inteligência artificial.",
+      "source": "Aula 1 · p. 16–22"
+    },
+    {
+      "id": "v2fm-l11",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “Algoritmo, software e hardware”?",
+      "back": "Hardware = tocar; Software = instruir; Algoritmo = passos.",
+      "source": "Aula 1 · p. 16–22"
+    },
+    {
+      "id": "v2fc-l12",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “IA simbólica e conexionista”?",
+      "back": "O material menciona também abordagem evolucionária, sem aprofundá-la.",
+      "source": "Aula 1 · p. 31–33"
+    },
+    {
+      "id": "v2fm-l12",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “IA simbólica e conexionista”?",
+      "back": "Simbólica = símbolos; Conexionista = conexões.",
+      "source": "Aula 1 · p. 31–33"
+    },
+    {
+      "id": "v2fc-l13",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “Redes neurais artificiais”?",
+      "back": "Redes neurais são modelos computacionais inspirados no cérebro, não neurônios biológicos.",
+      "source": "Aula 1 · p. 34–38"
+    },
+    {
+      "id": "v2fm-l13",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “Redes neurais artificiais”?",
+      "back": "Nós + conexões + pesos + treino.",
+      "source": "Aula 1 · p. 34–38"
+    },
+    {
+      "id": "v2fc-l14",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “IA forte e IA fraca nos slides”?",
+      "back": "A afirmação do slide que aproxima ML/DL de IA forte não significa, por si só, que ML/DL comprovem autoconsciência.",
+      "source": "Aula 1 · p. 39–44"
+    },
+    {
+      "id": "v2fm-l14",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “IA forte e IA fraca nos slides”?",
+      "back": "Fraca = focada; forte = capacidade geral na apresentação.",
+      "source": "Aula 1 · p. 39–44"
+    },
+    {
+      "id": "v2fc-l15",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “Aplicações reais de IA”?",
+      "back": "Nem todo sistema automatizado utiliza aprendizagem de máquina.",
+      "source": "Aula 1 · p. 45–55"
+    },
+    {
+      "id": "v2fm-l15",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “Aplicações reais de IA”?",
+      "back": "IA no cotidiano = reconhecer, prever e apoiar decisões.",
+      "source": "Aula 1 · p. 45–55"
+    },
+    {
+      "id": "v2fc-l16",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “IA, Machine Learning e Deep Learning”?",
+      "back": "Machine Learning não é sinônimo de toda a inteligência artificial.",
+      "source": "Aula 1 · p. 56–62"
+    },
+    {
+      "id": "v2fm-l16",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “IA, Machine Learning e Deep Learning”?",
+      "back": "IA ⊃ ML ⊃ DL.",
+      "source": "Aula 1 · p. 56–62"
+    },
+    {
+      "id": "v2fc-l17",
+      "module": "Inteligência Artificial",
+      "front": "Qual a pegadinha em “Machine Learning na prática”?",
+      "back": "Ter dados não significa que um sistema aprende automaticamente; precisa haver um mecanismo apropriado.",
+      "source": "Aula 1 · p. 59–67"
+    },
+    {
+      "id": "v2fm-l17",
+      "module": "Inteligência Artificial",
+      "front": "Como lembrar “Machine Learning na prática”?",
+      "back": "Aprender com exemplos para melhorar desempenho.",
+      "source": "Aula 1 · p. 59–67"
+    },
+    {
+      "id": "v2fc-l18",
+      "module": "Business Intelligence",
+      "front": "Qual a pegadinha em “O que é Business Intelligence?”?",
+      "back": "Power BI é ferramenta; BI é processo/conceito.",
+      "source": "Aula 1 · p. 68–72"
+    },
+    {
+      "id": "v2fm-l18",
+      "module": "Business Intelligence",
+      "front": "Como lembrar “O que é Business Intelligence?”?",
+      "back": "BI = dados → insights → decisões.",
+      "source": "Aula 1 · p. 68–72"
+    },
+    {
+      "id": "v2fc-l19",
+      "module": "Business Intelligence",
+      "front": "Qual a pegadinha em “Três pilares de BI”?",
+      "back": "Os pilares se conectam, mas suas funções não são idênticas.",
+      "source": "Aula 1 · p. 73–76"
+    },
+    {
+      "id": "v2fm-l19",
+      "module": "Business Intelligence",
+      "front": "Como lembrar “Três pilares de BI”?",
+      "back": "Estratégia planeja; Análise entende; Operação faz.",
+      "source": "Aula 1 · p. 73–76"
+    },
+    {
+      "id": "v2fc-l20",
+      "module": "Business Intelligence",
+      "front": "Qual a pegadinha em “As quatro etapas do BI”?",
+      "back": "Analisar dados e gerar insights são etapas conectadas, mas não equivalentes.",
+      "source": "Aula 1 · p. 77–85"
+    },
+    {
+      "id": "v2fm-l20",
+      "module": "Business Intelligence",
+      "front": "Como lembrar “As quatro etapas do BI”?",
+      "back": "C-A-I-A: Coletar, Analisar, Insights, Acompanhar.",
+      "source": "Aula 1 · p. 77–85"
+    },
+    {
+      "id": "v2fc-l21",
+      "module": "Coleta de Dados",
+      "front": "Qual a pegadinha em “O que é coleta de dados?”?",
+      "back": "Juntar tudo sem objetivos e sem analisar não produz automaticamente valor.",
+      "source": "Aula 2 · p. 2–17"
+    },
+    {
+      "id": "v2fm-l21",
+      "module": "Coleta de Dados",
+      "front": "Como lembrar “O que é coleta de dados?”?",
+      "back": "Coleta = capturar; análise = interpretar.",
+      "source": "Aula 2 · p. 2–17"
+    },
+    {
+      "id": "v2fc-l22",
+      "module": "Coleta de Dados",
+      "front": "Qual a pegadinha em “KPIs e indicadores estratégicos”?",
+      "back": "Nem toda métrica é automaticamente um KPI estratégico.",
+      "source": "Aula 2 · p. 18–22"
+    },
+    {
+      "id": "v2fm-l22",
+      "module": "Coleta de Dados",
+      "front": "Como lembrar “KPIs e indicadores estratégicos”?",
+      "back": "KPI = medir o que importa para a meta.",
+      "source": "Aula 2 · p. 18–22"
+    },
+    {
+      "id": "v2fc-l23",
+      "module": "Coleta de Dados",
+      "front": "Qual a pegadinha em “Objetivos e planejamento de coleta”?",
+      "back": "Ferramentas sozinhas não substituem pergunta de negócio.",
+      "source": "Aula 2 · p. 29–39"
+    },
+    {
+      "id": "v2fm-l23",
+      "module": "Coleta de Dados",
+      "front": "Como lembrar “Objetivos e planejamento de coleta”?",
+      "back": "Objetivo → planejamento → coleta → análise → melhoria.",
+      "source": "Aula 2 · p. 29–39"
+    },
+    {
+      "id": "v2fc-l24",
+      "module": "Coleta de Dados",
+      "front": "Qual a pegadinha em “Relacionamento e campanhas”?",
+      "back": "Cliques não garantem por si só satisfação ou conversão: interprete o contexto.",
+      "source": "Aula 2 · p. 20–28"
+    },
+    {
+      "id": "v2fm-l24",
+      "module": "Coleta de Dados",
+      "front": "Como lembrar “Relacionamento e campanhas”?",
+      "back": "Interação → conhecimento do público → ajuste.",
+      "source": "Aula 2 · p. 20–28"
+    },
+    {
+      "id": "v2fc-l25",
+      "module": "Coleta de Dados",
+      "front": "Qual a pegadinha em “Ferramentas de coleta”?",
+      "back": "As funcionalidades comerciais podem mudar; aqui estudamos as descrições dos slides.",
+      "source": "Aula 2 · p. 40–45"
+    },
+    {
+      "id": "v2fm-l25",
+      "module": "Coleta de Dados",
+      "front": "Como lembrar “Ferramentas de coleta”?",
+      "back": "Formulário = perguntar; Analytics = observar tráfego; UpMiner = minerar; Ion = interagir.",
+      "source": "Aula 2 · p. 40–45"
+    },
+    {
+      "id": "v2fc-l26",
+      "module": "Raciocínio Lógico",
+      "front": "Qual a pegadinha em “Raciocínio dedutivo”?",
+      "back": "Um argumento pode ser válido na forma mesmo se partir de premissas falsas; o slide enfatiza premissas verdadeiras para conclusão verdadeira.",
+      "source": "Aula 5 — Bailly · p. 3–5"
+    },
+    {
+      "id": "v2fm-l26",
+      "module": "Raciocínio Lógico",
+      "front": "Como lembrar “Raciocínio dedutivo”?",
+      "back": "Dedução = descer do geral ao caso.",
+      "source": "Aula 5 — Bailly · p. 3–5"
+    },
+    {
+      "id": "v2fc-l27",
+      "module": "Raciocínio Lógico",
+      "front": "Qual a pegadinha em “Raciocínio indutivo”?",
+      "back": "Uma amostra limitada não prova universalidade.",
+      "source": "Aula 5 — Bailly · p. 6–8"
+    },
+    {
+      "id": "v2fm-l27",
+      "module": "Raciocínio Lógico",
+      "front": "Como lembrar “Raciocínio indutivo”?",
+      "back": "Indução = subir dos exemplos para a regra.",
+      "source": "Aula 5 — Bailly · p. 6–8"
+    },
+    {
+      "id": "v2fc-l28",
+      "module": "Raciocínio Lógico",
+      "front": "Qual a pegadinha em “Raciocínio abdutivo”?",
+      "back": "Uma hipótese plausível não é uma certeza; pode haver explicações alternativas.",
+      "source": "Aula 5 — Bailly · p. 9–11"
+    },
+    {
+      "id": "v2fm-l28",
+      "module": "Raciocínio Lógico",
+      "front": "Como lembrar “Raciocínio abdutivo”?",
+      "back": "Abdução = achar explicação.",
+      "source": "Aula 5 — Bailly · p. 9–11"
+    },
+    {
+      "id": "v2fc-l29",
+      "module": "Raciocínio Lógico",
+      "front": "Qual a pegadinha em “Raciocínio analítico”?",
+      "back": "Não é apenas discordar de uma afirmação: isso se aproxima do pensamento crítico.",
+      "source": "Aula 5 — Bailly · p. 12–14"
+    },
+    {
+      "id": "v2fm-l29",
+      "module": "Raciocínio Lógico",
+      "front": "Como lembrar “Raciocínio analítico”?",
+      "back": "Analítico = quebrar em partes.",
+      "source": "Aula 5 — Bailly · p. 12–14"
+    },
+    {
+      "id": "v2fc-l30",
+      "module": "Raciocínio Lógico",
+      "front": "Qual a pegadinha em “Raciocínio crítico”?",
+      "back": "Pensamento crítico não é criticar pessoas nem negar tudo.",
+      "source": "Aula 5 — Bailly · p. 15–17"
+    },
+    {
+      "id": "v2fm-l30",
+      "module": "Raciocínio Lógico",
+      "front": "Como lembrar “Raciocínio crítico”?",
+      "back": "Crítico = questionar e avaliar as evidências.",
+      "source": "Aula 5 — Bailly · p. 15–17"
+    },
+    {
+      "id": "v2fc-l31",
+      "module": "Raciocínio Lógico",
+      "front": "Qual a pegadinha em “Comparando os cinco raciocínios”?",
+      "back": "Os cinco raciocínios podem ser usados conjuntamente em situações reais.",
+      "source": "Aula 5 — Bailly · p. 3–17"
+    },
+    {
+      "id": "v2fm-l31",
+      "module": "Raciocínio Lógico",
+      "front": "Como lembrar “Comparando os cinco raciocínios”?",
+      "back": "DE = geral; IN = padrões; AB = hipótese; AN = partes; CR = evidências.",
+      "source": "Aula 5 — Bailly · p. 3–17"
+    },
+    {
+      "id": "v2fc-l32",
+      "module": "Ética e Confiança",
+      "front": "Qual a pegadinha em “Ética dos dados”?",
+      "back": "O recado do colega indica prioridade baixa na prova, não irrelevância profissional.",
+      "source": "Aula 3 · p. 2–16"
+    },
+    {
+      "id": "v2fm-l32",
+      "module": "Ética e Confiança",
+      "front": "Como lembrar “Ética dos dados”?",
+      "back": "Ética = responsabilidade ao longo de todo o ciclo.",
+      "source": "Aula 3 · p. 2–16"
+    },
+    {
+      "id": "v2fc-l33",
+      "module": "Ética e Confiança",
+      "front": "Qual a pegadinha em “Consentimento e responsabilidade”?",
+      "back": "As obrigações legais reais variam conforme a base legal; aqui o foco é a discussão dos slides.",
+      "source": "Aula 3 · p. 21–25"
+    },
+    {
+      "id": "v2fm-l33",
+      "module": "Ética e Confiança",
+      "front": "Como lembrar “Consentimento e responsabilidade”?",
+      "back": "Antes de coletar, explique por quê.",
+      "source": "Aula 3 · p. 21–25"
+    },
+    {
+      "id": "v2fc-l34",
+      "module": "Ética e Confiança",
+      "front": "Qual a pegadinha em “Discriminação e vazamento de dados”?",
+      "back": "Esta parte recebe revisão breve por orientação informal, mas segue presente no material.",
+      "source": "Aula 3 · p. 26–31"
+    },
+    {
+      "id": "v2fm-l34",
+      "module": "Ética e Confiança",
+      "front": "Como lembrar “Discriminação e vazamento de dados”?",
+      "back": "Algoritmos também precisam de avaliação ética.",
+      "source": "Aula 3 · p. 26–31"
+    }
+  ],
+  "metadata": {
+    "lesson_count": 34,
+    "questions": 150,
+    "cards": 138,
+    "pdf_slides": 182,
+    "notice": "O PDF cita cinco Vs; suas explicações individuais e casos são complementos didáticos. Orientações de prova são informais.",
+    "version": "2.0.0",
+    "data_format": "JSON",
+    "source_pdf_pages": 182,
+    "question_bank_policy": "Gabaritos e exemplos didáticos; não são questões oficiais da prova",
+    "revised": "2026-10-18",
+    "scenarios": 20
+  },
+  "scenarios": [
+    {
+      "id": "c01",
+      "title": "Marketplace de eventos",
+      "story": "O marketplace recebe 50 milhões de novos eventos por hora, mas o enunciado pergunta principalmente pela quantidade total processada.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 0,
+      "explain": "Quantidade de dados é Volume, ainda que eventos possam também chegar rapidamente.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c02",
+      "title": "Radar de trânsito",
+      "story": "Para frear um veículo, o radar deve enviar resposta em poucos milissegundos.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 1,
+      "explain": "O desafio é o tempo de resposta: Velocidade.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c03",
+      "title": "Central de arquivos",
+      "story": "Uma central recebe vídeos, documentos PDF, mensagens e eventos JSON.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 2,
+      "explain": "Múltiplos formatos e estruturas refletem Variedade.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c04",
+      "title": "Cadastro suspeito",
+      "story": "Uma universidade detecta números impossíveis em históricos de alunos.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 3,
+      "explain": "Campos inconsistentes prejudicam Veracidade.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c05",
+      "title": "Melhorar entrega",
+      "story": "Uma transportadora analisa dados e reduz atrasos de forma mensurável.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 4,
+      "explain": "O benefício realizado representa Valor.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c06",
+      "title": "Sensores quebrados",
+      "story": "Um sensor envia leituras rapidamente, mas mede temperatura errada. Qual dimensão requer correção?",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 3,
+      "explain": "Há um problema de confiabilidade dos dados.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c07",
+      "title": "Visitas em tempo real",
+      "story": "O dashboard precisa se atualizar em menos de um segundo a cada visita.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 1,
+      "explain": "A ênfase está na rapidez da entrada/tratamento.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c08",
+      "title": "Milhões de imagens",
+      "story": "O museu armazena milhões de fotos em JPEG. O foco está no tamanho do conjunto.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 0,
+      "explain": "O formato é único, e o desafio descrito é quantidade.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c09",
+      "title": "Informação que gera receita",
+      "story": "Ao personalizar ofertas usando dados, a empresa aumenta receita com efeito comprovado.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 4,
+      "explain": "A aplicação útil dos dados revela Valor.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c10",
+      "title": "Bases heterogêneas",
+      "story": "Um pesquisador reúne planilhas, imagens de microscopia e áudios clínicos.",
+      "choices": [
+        "Volume",
+        "Velocidade",
+        "Variedade",
+        "Veracidade",
+        "Valor"
+      ],
+      "correct": 2,
+      "explain": "Tipos diferentes de dados evidenciam Variedade.",
+      "module": "Big Data",
+      "source": "Aula 1 · pp. 8–11 (conceito; cenário didático)"
+    },
+    {
+      "id": "c11",
+      "title": "API instável",
+      "story": "O técnico divide o diagnóstico em logs, autenticação, cache e banco.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 3,
+      "explain": "Decomposição em partes descreve raciocínio Analítico.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c12",
+      "title": "Lentidão na segunda",
+      "story": "A equipe nota quatro segundas com lentidão e suspeita que toda segunda será assim.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 1,
+      "explain": "Generalização de observações é Indutivo; não garante certeza.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c13",
+      "title": "Fumaça na sala",
+      "story": "Ao ver fumaça, a equipe considera um curto-circuito como hipótese explicativa.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 2,
+      "explain": "Busca da explicação plausível é Abdutivo.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c14",
+      "title": "Premissas e regras",
+      "story": "Todos os pedidos confirmados foram faturados. O pedido 102 foi confirmado. Logo ele foi faturado.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 0,
+      "explain": "Regra geral aplicada a caso: Dedutivo.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c15",
+      "title": "Relatório duvidoso",
+      "story": "O gestor questiona fonte, validade da amostra e coerência do argumento.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 4,
+      "explain": "Avaliação das evidências: Crítico.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c16",
+      "title": "Debug por módulos",
+      "story": "O erro parece enorme; você isola cada componente e testa separadamente.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 3,
+      "explain": "Quebrar problema em partes é Analítico.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c17",
+      "title": "Suposição de gripe",
+      "story": "Febre e tosse levam à hipótese de gripe, mas outras causas são possíveis.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 2,
+      "explain": "Hipótese explicativa a partir de sintomas: Abdutivo.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c18",
+      "title": "Todos os mamíferos",
+      "story": "Todos os mamíferos respiram. Golfinho é mamífero. Logo respira.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 0,
+      "explain": "Forma de silogismo: Dedutivo.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c19",
+      "title": "Analisando notícia",
+      "story": "Antes de compartilhar, alguém verifica autor, evidência e alternativas.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 4,
+      "explain": "Exame reflexivo do argumento: Crítico.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    },
+    {
+      "id": "c20",
+      "title": "Últimas entregas",
+      "story": "Nove pedidos seguidos atrasaram. A equipe prevê que todos atrasarão.",
+      "choices": [
+        "Dedutivo",
+        "Indutivo",
+        "Abdutivo",
+        "Analítico",
+        "Crítico"
+      ],
+      "correct": 1,
+      "explain": "Generalização provável e sujeita a erro: Indutivo.",
+      "module": "Raciocínio Lógico",
+      "source": "Aula 5 · pp. 3–17 (conceito; cenário didático)"
+    }
+  ]
+}
